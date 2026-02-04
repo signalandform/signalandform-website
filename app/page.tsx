@@ -12,48 +12,56 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[500px] flex items-center justify-center bg-gradient-to-b from-base to-base-midtone px-4">
+      {/* Hero - neo-retro minimal, spacious */}
+      <section className="relative min-h-[85vh] flex items-center justify-center bg-gradient-to-b from-base to-base-midtone px-4 py-30">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-contrast mb-6">
+          <div className="mb-12 flex justify-center">
+            <video
+              src="/brand/logo-animation.mov"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-20 w-auto max-w-[200px] object-contain brightness-0 invert opacity-90"
+              aria-label="Signal & Form"
+            />
+          </div>
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-contrast mb-8 leading-tight">
             Wraps &amp; Signs That Make Your Food Truck or Booth Unmissable in DFW
           </h1>
-          <p className="text-lg md:text-xl text-contrast-midtone mb-8">
+          <p className="text-lg md:text-xl text-contrast-midtone mb-12 max-w-2xl mx-auto">
             Signal &amp; Form is a Grapevine-based studio specializing in food truck and trailer
-            wraps, custom signage, banners, and flags for small businesses. We turn your vehicle or
-            booth into a clear, attention-grabbing billboard so more people stop, look, and buy.
+            wraps, custom signage, banners, and flags for small businesses.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="px-6 py-3 border-2 border-accent-2 text-accent-2 rounded-full font-medium hover:bg-accent-2 hover:text-base transition-colors"
+              className="px-8 py-3 border border-contrast-midtone text-contrast rounded-full font-medium hover:bg-contrast hover:text-base transition-colors"
             >
-              Get a Project quote
+              Get a quote
             </Link>
-            <a
+            <Link
               href="#casestudy"
-              className="px-6 py-3 border-2 border-accent-2 text-accent-2 rounded-full font-medium hover:bg-accent-2 hover:text-base transition-colors"
+              className="px-8 py-3 border border-contrast-midtone text-contrast rounded-full font-medium hover:bg-contrast hover:text-base transition-colors"
             >
               See what we do
-            </a>
-            <a
-              href="https://instagram.com/signalandformllc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border-2 border-accent-2 text-accent-2 rounded-full font-medium hover:bg-accent-2 hover:text-base transition-colors"
+            </Link>
+            <Link
+              href="/work"
+              className="px-8 py-3 border border-contrast-midtone text-contrast rounded-full font-medium hover:bg-contrast hover:text-base transition-colors"
             >
               Project Showcase
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Perfect for */}
-      <section className="py-16 px-4 bg-[#f3f4f6]">
+      <section className="py-24 px-4 bg-warm-bg">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-16">
             <div>
-              <h2 className="text-2xl font-semibold text-base mb-4">
+              <h2 className="font-serif text-2xl font-medium text-base mb-4">
                 Perfect for Food Trucks, Trailers, and Local Booths in DFW
               </h2>
             </div>
@@ -78,9 +86,9 @@ export default function HomePage() {
       </section>
 
       {/* Services */}
-      <section className="py-16 px-4 bg-base">
+      <section className="py-24 px-4 bg-base">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-contrast mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-contrast mb-16">
             Services for Food Trucks, Trailers, and Local Businesses
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -123,13 +131,13 @@ export default function HomePage() {
       </section>
 
       {/* Process */}
-      <section className="py-16 px-4 bg-gradient-to-b from-white to-[#f3f4f6]">
+      <section className="py-24 px-4 bg-warm-bg-alt">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-base text-center mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-base text-center mb-16">
             How the Process Works
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-tl-[20px] shadow-sm">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-warm-bg p-8 border border-warm-border">
               <p className="text-accent-3 text-xl font-light tracking-wider mb-2">01</p>
               <h3 className="text-lg font-medium text-base mb-3">
                 Share Your Project &amp; Get a Clear Quote
@@ -140,7 +148,7 @@ export default function HomePage() {
                 print, and (if needed) install coordination—no surprise fees.
               </p>
             </div>
-            <div className="bg-white p-6 shadow-sm">
+            <div className="bg-warm-bg p-8 border border-warm-border">
               <p className="text-accent-3 text-xl font-light tracking-wider mb-2">02</p>
               <h3 className="text-lg font-medium text-base mb-3">Design &amp; Revisions</h3>
               <p className="text-base-midtone">
@@ -148,7 +156,7 @@ export default function HomePage() {
                 files.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-tr-[20px] shadow-sm">
+            <div className="bg-warm-bg p-8 border border-warm-border">
               <p className="text-accent-3 text-xl font-light tracking-wider mb-2">03</p>
               <h3 className="text-lg font-medium text-base mb-3">Print, Install &amp; Launch</h3>
               <p className="text-base-midtone">
@@ -162,10 +170,10 @@ export default function HomePage() {
       </section>
 
       {/* Case Study */}
-      <section id="casestudy" className="py-16 px-4 bg-base">
+      <section id="casestudy" className="py-24 px-4 bg-base">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-start gap-8 mb-8">
-            <h2 className="text-2xl font-medium text-accent-1 shrink-0">
+            <h2 className="font-serif text-2xl font-medium text-accent-1 shrink-0">
               Case Study: Baja Quesadilla
             </h2>
             <div className="border-l-2 border-accent-3 pl-8">
@@ -201,7 +209,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-16 px-4 bg-[#f3f4f6]">
+      <section className="py-24 px-4 bg-warm-bg">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-xl font-bold text-base mb-8">General FAQs</h3>
           <div className="space-y-4">

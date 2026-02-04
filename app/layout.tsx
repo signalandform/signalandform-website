@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
+import { Roboto_Flex, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,6 +7,12 @@ import Footer from "@/components/Footer";
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
   variable: "--font-roboto-flex",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -31,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoFlex.variable} font-sans antialiased bg-base text-contrast`}>
+      <body className={`${robotoFlex.variable} ${playfair.variable} font-sans antialiased bg-base text-contrast`}>
         <Header />
         <main>{children}</main>
         <Footer />

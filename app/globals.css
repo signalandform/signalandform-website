@@ -8,6 +8,10 @@
   --accent-1: #97C6DF;
   --accent-2: #A1D0F2;
   --accent-3: #2C4F64;
+  /* Neo-retro minimal: warm neutrals */
+  --warm-bg: #F5F0E8;
+  --warm-bg-alt: #E8E2D8;
+  --warm-border: #D4CFC4;
 }
 
 body {

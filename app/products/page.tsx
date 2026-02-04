@@ -54,12 +54,12 @@ const featuredProducts = [
 export default function ProductsPage() {
   return (
     <div className="min-h-screen">
-      <section className="py-16 px-4 bg-base">
+      <section className="py-24 px-4 bg-base">
         <div className="max-w-6xl mx-auto">
           <p className="text-contrast-midtone mb-4">
             Our custom graphic design and printing services ensure your brand stands out.
           </p>
-          <h1 className="text-4xl font-medium text-contrast mb-12">Full Product List</h1>
+          <h1 className="font-serif text-4xl font-medium text-contrast mb-12">Full Product List</h1>
 
           {/* Quick nav */}
           <div className="flex flex-wrap justify-center gap-3 mb-16">
@@ -75,7 +75,7 @@ export default function ProductsPage() {
           </div>
 
           {/* CTA card */}
-          <div className="bg-[#f3f4f6] rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-16">
+          <div className="bg-warm-bg border border-warm-border p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-16">
             <div>
               <p className="font-semibold text-base">Ready to roll?</p>
               <p className="text-base-midtone">Head over to the contact page, and get a quote within 24 hours.</p>

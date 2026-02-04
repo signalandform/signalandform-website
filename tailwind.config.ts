@@ -15,6 +15,11 @@ const config: Config = {
         "base-midtone": "#1C1C1C",
         "contrast-midtone": "#DADADA",
         contrast: "#FFFFFF",
+        warm: {
+          bg: "var(--warm-bg)",
+          "bg-alt": "var(--warm-bg-alt)",
+          border: "var(--warm-border)",
+        },
         accent: {
           1: "#97C6DF",
           2: "#A1D0F2",
@@ -26,6 +31,12 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-roboto-flex)", "system-ui", "sans-serif"],
+        serif: ["var(--font-playfair)", "Georgia", "serif"],
+      },
+      spacing: {
+        "18": "4.5rem",
+        "22": "5.5rem",
+        "30": "7.5rem",
       },
     },
   },

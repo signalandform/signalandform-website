@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
   { href: "/solutions", label: "Solutions" },
+  { href: "/work", label: "Work" },
   { href: "/contact", label: "Contact" },
   { href: "https://www.etsy.com/shop/SignalandFormLLC", label: "Shop", external: true },
   { href: "https://www.typestrip.com", label: "TypeStrip", external: true },
@@ -16,11 +18,18 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-200">
+    <header className="bg-warm-bg border-b border-warm-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-xl font-semibold text-base hover:text-accent-3 transition-colors">
-            Signal &amp; Form LLC
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/brand/logos/IMG_0088.PNG"
+              alt="Signal & Form LLC"
+              width={160}
+              height={44}
+              className="h-11 w-auto"
+              priority
+            />
           </Link>
           <button
             type="button"
@@ -38,7 +47,7 @@ export default function Header() {
             </svg>
           </button>
           <nav
-            className={`${mobileMenuOpen ? "block" : "hidden"} md:flex absolute md:relative top-[73px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent border-b md:border-b-0 border-gray-200 md:border-0 py-4 md:py-0 px-4 md:px-0 z-10`}
+            className={`${mobileMenuOpen ? "block" : "hidden"} md:flex absolute md:relative top-[73px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-warm-bg md:bg-transparent border-b md:border-b-0 border-warm-border md:border-0 py-4 md:py-0 px-4 md:px-0 z-10`}
             aria-label="Main navigation"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
@@ -49,7 +58,7 @@ export default function Header() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-base hover:text-accent-2 transition-colors"
+                  className="text-sm text-base hover:text-accent-3 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -58,7 +67,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-base hover:text-accent-2 transition-colors"
+                  className="text-sm text-base hover:text-accent-3 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}

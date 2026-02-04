@@ -10,9 +10,9 @@ export default function SolutionsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero CTA */}
-      <section className="py-16 px-4 bg-base relative overflow-hidden">
+      <section className="py-24 px-4 bg-base relative overflow-hidden">
         <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl font-semibold text-contrast mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-contrast mb-6">
             Transform Your Brand with Stunning Signs, Banners, and Wraps Today!
           </h2>
           <div className="space-y-3 text-contrast-midtone mb-8">
@@ -41,13 +41,13 @@ export default function SolutionsPage() {
       </section>
 
       {/* What we do */}
-      <section className="py-16 px-4 bg-gradient-to-b from-white to-[#f3f4f6]">
+      <section className="py-24 px-4 bg-warm-bg">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-base text-center mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-base text-center mb-12">
             What we do
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-tl-[20px] shadow-sm">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-warm-bg-alt p-8 border border-warm-border">
               <p className="text-accent-3 text-xl font-light tracking-wider mb-2">01</p>
               <h3 className="text-lg font-medium text-base mb-3">Design</h3>
               <p className="text-base-midtone">
@@ -55,7 +55,7 @@ export default function SolutionsPage() {
                 look, or optimizing a wonderful one, we can do it all.
               </p>
             </div>
-            <div className="bg-white p-6 shadow-sm">
+            <div className="bg-warm-bg-alt p-8 border border-warm-border">
               <p className="text-accent-3 text-xl font-light tracking-wider mb-2">02</p>
               <h3 className="text-lg font-medium text-base mb-3">Print</h3>
               <p className="text-base-midtone">
@@ -63,7 +63,7 @@ export default function SolutionsPage() {
                 optimize and import your design, making ordering a banner a breeze.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-tr-[20px] shadow-sm">
+            <div className="bg-warm-bg-alt p-8 border border-warm-border">
               <p className="text-accent-3 text-xl font-light tracking-wider mb-2">03</p>
               <h3 className="text-lg font-medium text-base mb-3">Wrap</h3>
               <p className="text-base-midtone">
