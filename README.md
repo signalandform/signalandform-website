@@ -5,7 +5,7 @@ Monorepo with two Next.js sites:
 | Site | Root Directory | Domain |
 |------|----------------|--------|
 | **Signal & Form LLC** | `.` (root) | signalandform.net |
-| **Hilltop Truck Park** | `hilltoptruckpark/` | hilltoptruckpark.signalandform.net |
+| **Hilltop Truck Park** | `0-hilltoptruckpark/` | hilltoptruckpark.signalandform.net |
 
 ---
 
@@ -58,7 +58,7 @@ Food truck court site for Hilltop Truck Park in Justin, TX. Hosted at `hilltoptr
 ### Getting Started
 
 ```bash
-cd hilltoptruckpark
+cd 0-hilltoptruckpark
 npm install
 npm run dev
 ```
@@ -66,8 +66,8 @@ npm run dev
 ### Deploy on Vercel
 
 1. Create a **second** Vercel project from the same repo
-2. Set **Root Directory** to `hilltoptruckpark`
+2. Set **Root Directory** to `0-hilltoptruckpark`
 3. Add custom domain `hilltoptruckpark.signalandform.net`
 4. Configure DNS (CNAME) as instructed by Vercel
 
-See `hilltoptruckpark/README.md` for more details.
+See `0-hilltoptruckpark/README.md` for more details.
