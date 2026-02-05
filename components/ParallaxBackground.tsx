@@ -25,7 +25,7 @@ export default function ParallaxBackground() {
     <div
       className="fixed inset-0 z-0 pointer-events-none"
       style={{
-        backgroundImage: "url(/brand/hero-bg.png)",
+        backgroundImage: "url(/brand/logos/IMG_0122.PNG)",
         backgroundSize: "175%",
         backgroundPosition: `center ${reducedMotion ? "center" : `${offsetY}px`}`,
         opacity: 0.35,
