@@ -13,7 +13,7 @@ export default function VendorRequestsPage() {
         <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
           Hilltop Vendor Space Request
         </h1>
-        <p className="text-htp-ink leading-[1.55] mb-12 max-w-2xl">
+        <p className="text-htp-ink leading-[1.55] mb-12 max-w-2xl mx-auto">
           Hilltop is a full service facility with bathrooms, seating, and full bar on site. We are
           family and pet friendly, and we love working with you. We have water, dump, grease
           disposal, and power on site. Propane and ice are available for purchase. If you would like
