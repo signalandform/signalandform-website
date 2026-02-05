@@ -1,17 +1,22 @@
 {
-  "ads": [
-    "IMG_0293.PNG",
-    "IMG_0294.PNG",
-    "IMG_0295.PNG",
-    "IMG_0296.PNG",
-    "IMG_0297.PNG",
-    "IMG_0298.PNG",
-    "IMG_0300.PNG",
-    "IMG_0301.PNG",
-    "IMG_0303.PNG",
-    "ad 02 Artboard 2.png"
-  ],
+  "ads": [],
   "projects": [
+    {
+      "name": "Signal & Form",
+      "slug": "signal-and-form",
+      "images": [
+        "IMG_0293.PNG",
+        "IMG_0294.PNG",
+        "IMG_0295.PNG",
+        "IMG_0296.PNG",
+        "IMG_0297.PNG",
+        "IMG_0298.PNG",
+        "IMG_0300.PNG",
+        "IMG_0301.PNG",
+        "IMG_0303.PNG",
+        "ad 02 Artboard 2.png"
+      ]
+    },
     {
       "name": "Baja Quesadilla",
       "slug": "Baja-Quesadilla",
@@ -28,22 +33,6 @@
         "Window Stickers 04 Artboard 4.png",
         "briansticker 01 Artboard 1.png",
         "briansticker2 01 Artboard 1.png"
-      ]
-    },
-    {
-      "name": "jacknel design",
-      "slug": "jacknel-design",
-      "images": [
-        "1991 01 Artboard 1.jpg",
-        "1992 01 Artboard 1.jpg",
-        "1992 02 Artboard 2.jpg",
-        "1992 03 Artboard 3.jpg",
-        "1992 copy 01 Artboard 1.jpg",
-        "1992 copy 02 Artboard 3.jpg",
-        "1992 copy 03 Artboard 4.jpg",
-        "1992 copy 04 Artboard 8.jpg",
-        "1992 copy 05 Artboard 10.jpg",
-        "1992 copy 06 Artboard 13.jpg"
       ]
     },
     {

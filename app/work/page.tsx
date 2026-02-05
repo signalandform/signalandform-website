@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 type Project = { name: string; slug: string; images: string[] };
 
 export default function WorkPage() {
-  const { ads, projects } = workData as {
-    ads: string[];
+  const { projects } = workData as {
     projects: Project[];
   };
 
@@ -34,40 +33,6 @@ export default function WorkPage() {
           </p>
         </div>
       </section>
-
-      {/* Ads grid */}
-      {ads.length > 0 && (
-        <section className="py-28 px-4 bg-base">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-display font-semibold text-display-md text-contrast mb-16 scroll-reveal">
-              Ads &amp; Campaigns
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {ads.map((src, i) => (
-                <div
-                  key={src}
-                  className={`group relative aspect-[4/5] overflow-hidden rounded-xl border border-base-midtone bg-base-midtone transition-all duration-300 hover:scale-[1.02] hover:border-accent-3/50 ${
-                    i === 0 ? "sm:col-span-2 sm:aspect-[2/1]" : ""
-                  }`}
-                >
-                  <Image
-                    src={`/brand/work/${src}`}
-                    alt=""
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-base/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span className="text-accent-2 font-medium text-sm">
-                      Campaign
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Client list */}
       <section

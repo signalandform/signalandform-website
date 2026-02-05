@@ -90,23 +90,12 @@ function main() {
   console.log("Collecting project images...");
   const rawProjects = collectProjectImages(tempDir);
 
-  // Keep existing ads from current workData or default
-  let ads = [
-    "IMG_0293.PNG",
-    "IMG_0294.PNG",
-    "IMG_0295.PNG",
-    "IMG_0296.PNG",
-    "IMG_0297.PNG",
-    "IMG_0298.PNG",
-    "IMG_0300.PNG",
-    "IMG_0301.PNG",
-    "IMG_0303.PNG",
-    "ad 02 Artboard 2.png",
-  ];
+  // Preserve existing ads (empty by default; ads are now under Signal & Form project)
+  let ads = [];
   if (fs.existsSync(workDataPath)) {
     try {
       const existing = JSON.parse(fs.readFileSync(workDataPath, "utf8"));
-      if (Array.isArray(existing.ads) && existing.ads.length > 0) {
+      if (Array.isArray(existing.ads)) {
         ads = existing.ads;
       }
     } catch (_) {}
