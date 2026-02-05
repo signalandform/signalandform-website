@@ -49,9 +49,9 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center group">
             <Image
-              src="/brand/logos/icon.png"
+              src="/brand/logos/IMG_0122.PNG"
               alt="Signal & Form LLC"
-              width={44}
+              width={160}
               height={44}
               className="h-11 w-auto brightness-0 invert opacity-95 group-hover:opacity-100 transition-opacity"
               priority
