@@ -28,7 +28,7 @@ export default function ParallaxBackground() {
         backgroundImage: "url(/brand/hero-bg.png)",
         backgroundSize: "400%",
         backgroundPosition: `center ${reducedMotion ? "center" : `${offsetY}px`}`,
-        opacity: 0.5,
+        opacity: 0.35,
       }}
     />
   );
