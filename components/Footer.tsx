@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block">
               <Image
-                src="/brand/logos/IMG_0088.PNG"
+                src="/brand/logos/IMG_0122.PNG"
                 alt="Signal & Form LLC"
                 width={140}
                 height={40}

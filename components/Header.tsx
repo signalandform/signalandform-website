@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center">
             <Image
-              src="/brand/logos/IMG_0088.PNG"
+              src="/brand/logos/IMG_0122.PNG"
               alt="Signal & Form LLC"
               width={160}
               height={44}
