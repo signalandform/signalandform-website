@@ -35,6 +35,7 @@ const config: Config = {
         display: ["var(--font-syne)", "var(--font-playfair)", "Georgia", "serif"],
       },
       fontSize: {
+        "display-2xl": ["clamp(4rem, 14vw, 9rem)", { lineHeight: "0.95", letterSpacing: "-0.03em" }],
         "display-xl": ["clamp(3rem, 8vw, 5.5rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
         "display-lg": ["clamp(2.25rem, 5vw, 3.5rem)", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
         "display-md": ["clamp(1.75rem, 4vw, 2.5rem)", { lineHeight: "1.15" }],

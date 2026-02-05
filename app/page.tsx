@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero - business overview */}
-      <section className="relative min-h-[100vh] flex items-center justify-center bg-gradient-to-b from-base via-base to-base-midtone px-4 py-20 overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center bg-gradient-to-b from-base via-base to-base-midtone px-4 sm:px-8 lg:px-12 py-20 overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -18,39 +18,30 @@ export default function HomePage() {
             backgroundSize: "48px 48px",
           }}
         />
-        <div className="relative max-w-5xl mx-auto text-center">
-          <div className="mb-14 flex justify-center opacity-0 animate-hero-fade-up [animation-delay:0.1s] ">
-            <video
-              src="/brand/logo-animation.mov"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="h-24 w-auto max-w-[240px] object-contain brightness-0 invert opacity-95"
-              aria-label="Signal & Form"
-            />
-          </div>
-          <h1 className="font-display font-semibold text-display-xl text-contrast mb-6 tracking-tight opacity-0 animate-hero-fade-up [animation-delay:0.2s] ">
-            <span className="block">Design</span>
-            <span className="block text-accent-2">&amp; Build</span>
-          </h1>
-          <p className="text-lg md:text-xl text-contrast-midtone mb-14 max-w-2xl mx-auto opacity-0 animate-hero-fade-up [animation-delay:0.35s] ">
-            Signal &amp; Form is a Grapevine-based studio. We design brands, signage, and
-            physical products—and we build them for food trucks, local businesses, and makers in DFW.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 animate-hero-fade-up [animation-delay:0.5s] ">
-            <Link
-              href="/solutions"
-              className="group px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-1/25"
-            >
-              Design, Print &amp; Wrap
-            </Link>
-            <Link
-              href="/products"
-              className="px-10 py-4 border border-contrast-midtone text-contrast rounded-full font-medium hover:bg-contrast hover:text-base transition-all duration-300"
-            >
-              Products
-            </Link>
+        <div className="relative w-full max-w-6xl ml-auto">
+          <div className="max-w-2xl ml-auto text-right">
+            <h1 className="font-display font-semibold text-display-2xl text-contrast mb-6 tracking-tight opacity-0 animate-hero-fade-up [animation-delay:0.1s] ">
+              <span className="block">Design</span>
+              <span className="block text-accent-2">&amp; Build</span>
+            </h1>
+            <p className="text-lg md:text-xl text-contrast-midtone mb-14 opacity-0 animate-hero-fade-up [animation-delay:0.25s] ">
+              Signal &amp; Form is a Grapevine-based studio. We design brands, signage, and
+              physical products—and we build them for food trucks, local businesses, and makers in DFW.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start gap-6 opacity-0 animate-hero-fade-up [animation-delay:0.4s] ">
+              <Link
+                href="/solutions"
+                className="group px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-1/25"
+              >
+                Design, Print &amp; Wrap
+              </Link>
+              <Link
+                href="/products"
+                className="px-10 py-4 border border-contrast-midtone text-contrast rounded-full font-medium hover:bg-contrast hover:text-base transition-all duration-300"
+              >
+                Products
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -85,8 +76,8 @@ export default function HomePage() {
                 Products
               </h3>
               <p className="text-base-midtone leading-relaxed mb-4">
-                TypeStrip and CountrTop—product brands for typography, lettering, and counter-top
-                signage. Custom solutions for retail, events, and makers.
+                TypeStrip (typography products in beta) and CountrTop (restaurant operations
+                platform—one system, front to back). Product brands for retail, events, and makers.
               </p>
               <span className="text-accent-2 font-medium group-hover:text-accent-3 transition-colors">
                 See products →

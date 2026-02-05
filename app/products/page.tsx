@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Products | Signal & Form",
   description:
-    "TypeStrip and CountrTop — product brands from Signal & Form. Custom typography products and counter-top solutions for your business.",
+    "TypeStrip and CountrTop — product brands from Signal & Form. Typography products and a restaurant operations platform.",
 };
 
 export default function ProductsPage() {
@@ -26,11 +26,10 @@ export default function ProductsPage() {
                 TypeStrip
               </h2>
               <p className="text-contrast-midtone leading-relaxed mb-6">
-                Custom typography products and lettering solutions. TypeStrip brings design and
-                craft together for businesses, events, and makers.
+                Typography products in beta. Register for an invite and join the beta tester community.
               </p>
               <a
-                href="https://www.typestrip.com"
+                href="https://typestrip.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-accent-2 font-medium hover:text-accent-1 transition-colors"
@@ -42,28 +41,144 @@ export default function ProductsPage() {
               </a>
             </div>
 
-            {/* CountrTop */}
+            {/* CountrTop - intro card */}
             <div className="group rounded-xl border border-base-midtone bg-base-midtone/30 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent-3/50 hover:shadow-xl hover:shadow-accent-3/10 scroll-reveal">
               <h2 className="font-display font-semibold text-2xl text-contrast mb-4">
                 CountrTop
               </h2>
               <p className="text-contrast-midtone leading-relaxed mb-6">
-                Counter-top signage and display solutions for retail, restaurants, and service
-                businesses. Stand out at the point of sale.
+                One platform to run your restaurant—front to back. A modern operations platform for
+                growing restaurants.
               </p>
-              <Link
-                href="/contact"
+              <a
+                href="https://countrtop.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-accent-2 font-medium hover:text-accent-1 transition-colors"
               >
-                Learn more / Get a quote
+                Visit CountrTop
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
 
-          <p className="mt-16 text-contrast-midtone scroll-reveal">
+          {/* CountrTop - full section */}
+          <div className="mt-24 scroll-reveal">
+            <h2 className="font-display font-semibold text-display-md text-contrast mb-6">
+              CountrTop
+            </h2>
+            <p className="text-xl text-accent-2 font-medium mb-6">
+              One platform to run your restaurant—front to back.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-8 max-w-3xl">
+              CountrTop is a modern restaurant operations platform designed to replace clunky systems,
+              scattered tools, and manual work. From order flow to kitchen execution to back-of-house
+              oversight, CountrTop keeps everything connected in real time—so your team can move
+              faster and make fewer mistakes.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-12 max-w-3xl">
+              Built for growing restaurants, CountrTop gives operators full visibility and control
+              without slowing down the people on the floor.
+            </p>
+
+            <h3 className="font-display font-semibold text-xl text-contrast mb-4">
+              How CountrTop Works
+            </h3>
+            <p className="text-contrast-midtone leading-relaxed mb-6 max-w-3xl">
+              CountrTop connects every part of your operation into a single, reliable system:
+            </p>
+            <ul className="space-y-2 text-contrast-midtone mb-12 max-w-3xl">
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Orders flow cleanly from point of sale to the kitchen
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Kitchen teams stay focused with clear, real-time ticket management
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Managers get oversight through powerful admin and ops tools
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Data stays consistent across locations, devices, and services
+              </li>
+            </ul>
+            <p className="text-contrast-midtone leading-relaxed mb-16 max-w-3xl italic">
+              No duct-taped integrations. No guessing what&apos;s happening in the kitchen. Everyone sees the same truth.
+            </p>
+
+            <h3 className="font-display font-semibold text-xl text-contrast mb-8">
+              Products
+            </h3>
+            <div className="space-y-10 mb-16">
+              <div className="border-l-2 border-accent-3 pl-6">
+                <h4 className="font-medium text-contrast mb-2">Kitchen Display System (KDS)</h4>
+                <p className="text-contrast-midtone leading-relaxed mb-4">
+                  Replace paper tickets and chaos with a fast, reliable kitchen display. CountrTop KDS
+                  shows orders exactly how your kitchen needs them—organized, timed, and easy to act on.
+                  Tickets update instantly, reduce missed items, and help your team move in sync during rushes.
+                </p>
+                <ul className="text-contrast-midtone text-sm space-y-1">
+                  <li>• Real-time order updates</li>
+                  <li>• Clear ticket prioritization</li>
+                  <li>• Built for speed, not clutter</li>
+                  <li>• Designed to scale from one kitchen to many</li>
+                </ul>
+              </div>
+              <div className="border-l-2 border-accent-3 pl-6">
+                <h4 className="font-medium text-contrast mb-2">Operations Dashboard</h4>
+                <p className="text-contrast-midtone leading-relaxed mb-4">
+                  Know what&apos;s happening—without being on the line. The CountrTop Ops Dashboard gives
+                  owners and operators a real-time view into performance across locations. Track order
+                  flow, identify bottlenecks, and spot issues before they become problems.
+                </p>
+                <ul className="text-contrast-midtone text-sm space-y-1">
+                  <li>• Live operational visibility</li>
+                  <li>• Multi-location support</li>
+                  <li>• Simple, actionable insights</li>
+                  <li>• Built for decision-makers, not analysts</li>
+                </ul>
+              </div>
+              <div className="border-l-2 border-accent-3 pl-6">
+                <h4 className="font-medium text-contrast mb-2">Admin &amp; Configuration</h4>
+                <p className="text-contrast-midtone leading-relaxed mb-4">
+                  Powerful control, without the complexity. CountrTop&apos;s admin tools make it easy to
+                  manage menus, workflows, devices, and permissions—without touching a terminal or
+                  calling support.
+                </p>
+                <ul className="text-contrast-midtone text-sm space-y-1">
+                  <li>• Centralized configuration</li>
+                  <li>• Role-based access</li>
+                  <li>• Fast updates across locations</li>
+                  <li>• Designed for real restaurant workflows</li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="text-contrast-midtone leading-relaxed max-w-3xl mb-12">
+              CountrTop isn&apos;t a generic POS add-on or a patched-together software stack. It&apos;s
+              purpose-built for modern restaurants that need speed, clarity, and reliability—whether
+              you&apos;re running one location or scaling to many.
+            </p>
+
+            <a
+              href="https://countrtop.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300"
+            >
+              Visit CountrTop
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+          <p className="mt-20 text-contrast-midtone scroll-reveal">
             For design, print, and wrap services—including vehicle wraps, banners, signs, and
             flags—visit our{" "}
             <Link href="/solutions" className="text-accent-2 font-medium hover:text-accent-1 transition-colors">
