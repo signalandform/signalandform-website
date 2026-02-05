@@ -17,11 +17,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block group">
               <Image
-                src="/brand/logos/IMG_0122.PNG"
+                src="/brand/logos/icon.png"
                 alt="Signal & Form LLC"
-                width={160}
+                width={44}
                 height={44}
-                className="h-12 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
+                className="h-11 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
               />
             </Link>
             <p className="mt-4 text-contrast-midtone leading-relaxed max-w-sm">
