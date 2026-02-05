@@ -3,24 +3,84 @@
 @tailwind utilities;
 
 :root {
-  --background: #181818;
+  --background: #161616;
   --foreground: #ffffff;
-  --accent-1: #97C6DF;
-  --accent-2: #A1D0F2;
+  /* Evolved palette: deeper, richer blues */
+  --accent-1: #7BB8D4;
+  --accent-2: #8CC5E8;
   --accent-3: #2C4F64;
-  /* Neo-retro minimal: warm neutrals */
+  --accent-gradient: linear-gradient(135deg, #7BB8D4 0%, #8CC5E8 100%);
+  /* Base: slightly warmer dark for depth */
+  --base: #161616;
+  --base-midtone: #1a1a1a;
+  --contrast-midtone: #e5e5e5;
+  /* Warm sections: cream/beige with subtle richness */
   --warm-bg: #F5F0E8;
   --warm-bg-alt: #E8E2D8;
   --warm-border: #D4CFC4;
+  --warm-gradient: linear-gradient(180deg, #F7F3EC 0%, #F5F0E8 50%, #E8E2D8 100%);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  font-size: 1.0625rem;
+}
+
+/* Reduced motion: disable or simplify animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Hero entrance animations */
+  @keyframes hero-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-hero-fade-up {
+    animation: hero-fade-up 0.8s ease-out forwards;
+  }
+
+  /* Scroll reveal - used with scroll-timeline where supported */
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-reveal-up {
+    animation: reveal-up 0.8s ease-out forwards;
+  }
+}
+
+/* Scroll-driven animation utilities (progressive enhancement) */
+@supports (animation-timeline: scroll()) {
+  .scroll-reveal {
+    animation: reveal-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
   }
 }

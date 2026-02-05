@@ -3,7 +3,8 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Work | Signal & Form",
-  description: "Project showcase: vehicle wraps, signage, ads, and product mockups from Signal & Form.",
+  description:
+    "Project showcase: vehicle wraps, signage, ads, and product mockups from Signal & Form.",
 };
 
 const adImages = [
@@ -76,36 +77,46 @@ export default function WorkPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="py-24 px-4 bg-warm-bg">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-medium text-base mb-6">
+      <section
+        className="py-28 px-4"
+        style={{ background: "var(--warm-gradient)" }}
+      >
+        <div className="max-w-4xl mx-auto text-center scroll-reveal">
+          <h1 className="font-display font-semibold text-display-lg text-base mb-6">
             Work
           </h1>
-          <p className="text-contrast-midtone text-lg max-w-2xl mx-auto">
+          <p className="text-base-midtone text-lg max-w-2xl mx-auto">
             A selection of design work, ads, and product mockups from Signal & Form.
           </p>
         </div>
       </section>
 
-      {/* Ads grid */}
-      <section className="py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-2xl font-medium text-base mb-12">
-            Ads & Campaigns
+      {/* Ads grid - asymmetric, hover scale + caption */}
+      <section className="py-28 px-4 bg-base">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-display font-semibold text-display-md text-contrast mb-16 scroll-reveal">
+            Ads &amp; Campaigns
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {adImages.map((src) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {adImages.map((src, i) => (
               <div
                 key={src}
-                className="relative aspect-[4/5] border border-warm-border bg-warm-bg-alt overflow-hidden"
+                className={`group relative aspect-[4/5] overflow-hidden rounded-xl border border-base-midtone bg-base-midtone transition-all duration-300 hover:scale-[1.02] hover:border-accent-3/50 ${
+                  i === 0 ? "sm:col-span-2 sm:aspect-[2/1]" : ""
+                }`}
               >
                 <Image
                   src={`/brand/work/${src}`}
                   alt=""
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-base/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span className="text-accent-2 font-medium text-sm">
+                    Campaign
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -113,28 +124,38 @@ export default function WorkPage() {
       </section>
 
       {/* Product mockups by category */}
-      {productCategories.map((cat) => (
+      {productCategories.map((cat, catIndex) => (
         <section
           key={cat.name}
-          className="py-24 px-4 bg-warm-bg even:bg-warm-bg-alt"
+          className={`py-28 px-4 ${catIndex % 2 === 0 ? "bg-warm-bg" : ""}`}
+          style={
+            catIndex % 2 === 1
+              ? { background: "var(--warm-gradient)" }
+              : undefined
+          }
         >
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-2xl font-medium text-base mb-12">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-display font-semibold text-display-md text-base mb-12 scroll-reveal">
               {cat.name}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
               {cat.images.map((src) => (
                 <div
                   key={src}
-                  className="relative aspect-square border border-warm-border bg-white overflow-hidden"
+                  className="group relative aspect-square overflow-hidden rounded-xl border border-warm-border bg-white transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent-3/10"
                 >
                   <Image
                     src={`/brand/work/${src}`}
                     alt={cat.name}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
+                  <div className="absolute inset-0 bg-base/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                    <span className="text-contrast font-medium text-sm">
+                      {cat.name}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>

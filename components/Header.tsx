@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -16,24 +16,38 @@ const navLinks = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const linkClass =
+    "text-sm font-medium text-contrast-midtone hover:text-accent-2 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-[-2px] after:h-px after:w-0 after:bg-accent-2 after:transition-all after:duration-300 hover:after:w-full";
 
   return (
-    <header className="bg-warm-bg border-b border-warm-border">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-base/95 backdrop-blur-md border-b border-base-midtone shadow-lg shadow-black/10" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center group">
             <Image
               src="/brand/logos/IMG_0122.PNG"
               alt="Signal & Form LLC"
               width={160}
               height={44}
-              className="h-11 w-auto"
+              className="h-11 w-auto brightness-0 invert opacity-95 group-hover:opacity-100 transition-opacity"
               priority
             />
           </Link>
           <button
             type="button"
-            className="md:hidden p-2 text-base"
+            className="md:hidden p-2 text-contrast-midtone hover:text-accent-2 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle menu"
@@ -47,33 +61,33 @@ export default function Header() {
             </svg>
           </button>
           <nav
-            className={`${mobileMenuOpen ? "block" : "hidden"} md:flex absolute md:relative top-[73px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-warm-bg md:bg-transparent border-b md:border-b-0 border-warm-border md:border-0 py-4 md:py-0 px-4 md:px-0 z-10`}
+            className={`${mobileMenuOpen ? "block" : "hidden"} md:flex absolute md:relative top-[73px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-base/98 backdrop-blur-md md:bg-transparent border-b md:border-b-0 border-base-midtone md:border-0 py-4 md:py-0 px-4 md:px-0 z-10`}
             aria-label="Main navigation"
           >
-            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-            {navLinks.map((link) =>
-              link.external ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-base hover:text-accent-3 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-base hover:text-accent-3 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+              {navLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkClass}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={linkClass}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
           </nav>
         </div>

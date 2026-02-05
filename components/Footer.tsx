@@ -14,49 +14,87 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="bg-base border-t border-base-midtone">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col md:flex-row justify-between gap-8">
-          <div>
-            <Link href="/" className="inline-block">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          <div className="lg:col-span-2">
+            <Link href="/" className="inline-block group">
               <Image
                 src="/brand/logos/IMG_0122.PNG"
                 alt="Signal & Form LLC"
-                width={140}
-                height={40}
-                className="h-10 w-auto opacity-90 hover:opacity-100"
+                width={160}
+                height={44}
+                className="h-12 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
               />
             </Link>
-            <p className="mt-2 text-contrast-midtone text-sm">
-              Grapevine, Texas
-              <br />
-              <a href="mailto:jack@signalandformllc.com" className="text-accent-2 hover:underline">
+            <p className="mt-4 text-contrast-midtone leading-relaxed max-w-sm">
+              A Grapevine-based studio specializing in food truck wraps, custom signage, banners,
+              and flags for small businesses in DFW.
+            </p>
+            <div className="mt-4 space-y-1">
+              <p className="text-contrast-midtone text-sm">Grapevine, Texas</p>
+              <a
+                href="mailto:jack@signalandformllc.com"
+                className="text-accent-2 font-medium hover:text-accent-1 transition-colors inline-block"
+              >
                 jack@signalandformllc.com
               </a>
-            </p>
+              <br />
+              <a
+                href="tel:2148032520"
+                className="text-accent-2 font-medium hover:text-accent-1 transition-colors inline-block"
+              >
+                214 803 2520
+              </a>
+            </div>
           </div>
-          <nav className="flex flex-col gap-2" aria-label="Footer navigation">
-            {navLinks.map((link) =>
-              link.external ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-contrast-midtone hover:text-accent-2 transition-colors"
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-contrast-midtone hover:text-accent-2 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
-          </nav>
+          <div>
+            <h4 className="font-display font-semibold text-contrast mb-4">Quick Links</h4>
+            <nav className="flex flex-col gap-3" aria-label="Footer navigation">
+              {navLinks
+                .filter((l) => !l.external)
+                .map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-contrast-midtone hover:text-accent-2 font-medium transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+            </nav>
+          </div>
+          <div>
+            <h4 className="font-display font-semibold text-contrast mb-4">Elsewhere</h4>
+            <nav className="flex flex-col gap-3">
+              <a
+                href="https://www.etsy.com/shop/SignalandFormLLC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-contrast-midtone hover:text-accent-2 font-medium transition-colors"
+              >
+                Etsy Shop
+              </a>
+              <a
+                href="https://www.typestrip.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-contrast-midtone hover:text-accent-2 font-medium transition-colors"
+              >
+                TypeStrip
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div className="mt-12 pt-8 border-t border-base-midtone flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-contrast-midtone text-sm">
+            &copy; {new Date().getFullYear()} Signal &amp; Form LLC. All rights reserved.
+          </p>
+          <Link
+            href="/contact"
+            className="text-accent-2 font-medium hover:text-accent-1 transition-colors text-sm"
+          >
+            Get a quote
+          </Link>
         </div>
       </div>
     </footer>
