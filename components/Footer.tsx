@@ -38,7 +38,7 @@ export default function Footer() {
               </a>
               <br />
               <a
-                href="tel:2148032520"
+                href="tel:2144448889"
                 className="text-accent-2 font-medium hover:text-accent-1 transition-colors inline-block"
               >
                 214 444 8889
