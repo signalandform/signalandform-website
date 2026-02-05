@@ -3,7 +3,7 @@ import PlaceholderForm from "@/components/PlaceholderForm";
 
 export const metadata: Metadata = {
   title: "Contact Us | Hilltop Truck Park",
-  description: "Get in touch with Hilltop Truck Park in Justin, TX.",
+  description: "Get in touch with Hilltop Truck Park in Northlake, TX.",
 };
 
 export default function ContactUsPage() {
@@ -21,7 +21,7 @@ export default function ContactUsPage() {
             <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
               Address
             </h2>
-            <p>8356 Thompson Road, Justin, TX 76247</p>
+            <p>8150 Thompson Rd, Northlake, TX 76247</p>
           </div>
           <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-6">
             <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">

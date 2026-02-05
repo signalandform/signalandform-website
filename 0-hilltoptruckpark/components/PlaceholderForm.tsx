@@ -22,9 +22,11 @@ export default function PlaceholderForm({
       <div className="space-y-4 opacity-60 pointer-events-none">
         {fields.map((field) => (
           <div key={field.name}>
-            <label className="block text-sm font-medium text-htp-ink mb-2">
-              {field.label}
-            </label>
+            {field.type !== "checkbox" && (
+              <label className="block text-sm font-medium text-htp-ink mb-2">
+                {field.label}
+              </label>
+            )}
             {field.type === "textarea" ? (
               <textarea
                 name={field.name}
@@ -32,6 +34,16 @@ export default function PlaceholderForm({
                 className="w-full px-3 py-2 bg-htp-bg border border-htp-line rounded-btn text-htp-ink"
                 disabled
               />
+            ) : field.type === "checkbox" ? (
+              <div className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  name={field.name}
+                  className="w-4 h-4 rounded border-htp-line"
+                  disabled
+                />
+                <span className="text-sm text-htp-ink">{field.label}</span>
+              </div>
             ) : (
               <input
                 type={field.type || "text"}

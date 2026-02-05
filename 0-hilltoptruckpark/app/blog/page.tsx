@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog | Hilltop Truck Park",
-  description: "News, updates, and announcements from Hilltop Truck Park in Justin, TX.",
+  description: "News, updates, and announcements from Hilltop Truck Park in Northlake, TX.",
 };
 
 const posts = [

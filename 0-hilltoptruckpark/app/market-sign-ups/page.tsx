@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Market Sign-Ups | Hilltop Truck Park",
-  description: "Farmers market and vendor sign-ups at Hilltop Truck Park in Justin, TX.",
+  description: "Farmers market and vendor sign-ups at Hilltop Truck Park in Northlake, TX.",
 };
 
 const marketPlaceholders = Array.from({ length: 20 }, (_, i) => ({

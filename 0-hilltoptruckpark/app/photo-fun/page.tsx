@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Photo Fun! | Hilltop Truck Park",
-  description: "Foam parties, photo ops, and family fun at Hilltop Truck Park in Justin, TX.",
+  description: "Foam parties, photo ops, and family fun at Hilltop Truck Park in Northlake, TX.",
 };
 
 const galleryImages = [

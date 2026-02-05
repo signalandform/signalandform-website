@@ -21,7 +21,7 @@ export default function OnlineStorePage() {
           </p>
           <p className="text-htp-ink text-sm leading-[1.55]">
             Check back later for merch, swag, and more. In the meantime, visit us in person at
-            8356 Thompson Road, Justin, TX!
+            8150 Thompson Rd, Northlake, TX!
           </p>
         </div>
       </div>

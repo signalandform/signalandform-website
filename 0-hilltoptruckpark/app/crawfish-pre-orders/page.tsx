@@ -4,7 +4,7 @@ import PlaceholderForm from "@/components/PlaceholderForm";
 
 export const metadata: Metadata = {
   title: "Crawfish Pre-Orders | Hilltop Truck Park",
-  description: "Pre-order crawfish for pickup at Hilltop Truck Park in Justin, TX.",
+  description: "Pre-order crawfish for pickup at Hilltop Truck Park in Northlake, TX.",
 };
 
 export default function CrawfishPreOrdersPage() {

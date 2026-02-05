@@ -4,6 +4,7 @@ import Image from "next/image";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
+  { href: "/market-sign-ups", label: "Market Sign Ups" },
   { href: "/our-food-trucks", label: "Our Food Trucks" },
   { href: "/online-store", label: "Online Store" },
   { href: "/crawfish-pre-orders", label: "Crawfish Pre-orders" },
@@ -28,7 +29,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/90 text-sm">
-              8356 Thompson Road, Justin, TX 76247
+              8150 Thompson Rd, Northlake, TX 76247
               <br />
               <a href="mailto:info@hilltoptruckpark.com" className="text-htp-red hover:underline">
                 info@hilltoptruckpark.com

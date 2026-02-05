@@ -18,14 +18,14 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Hilltop Truck Park | Food Truck Court | Justin, TX",
+  title: "Hilltop Truck Park | Food Truck Court | Northlake, TX",
   description:
-    "Hilltop Truck Park is a food truck court in Justin, TX. Enjoy great food, events, and community at 8356 Thompson Road.",
+    "Hilltop Truck Park is a food truck court in Northlake, TX. Enjoy great food, events, and community at 8150 Thompson Rd.",
   metadataBase: new URL("https://hilltoptruckpark.signalandform.net"),
   openGraph: {
-    title: "Hilltop Truck Park | Food Truck Court | Justin, TX",
+    title: "Hilltop Truck Park | Food Truck Court | Northlake, TX",
     description:
-      "Hilltop Truck Park is a food truck court in Justin, TX. Enjoy great food, events, and community.",
+      "Hilltop Truck Park is a food truck court in Northlake, TX. Enjoy great food, events, and community.",
     url: "https://hilltoptruckpark.signalandform.net",
     siteName: "Hilltop Truck Park",
   },

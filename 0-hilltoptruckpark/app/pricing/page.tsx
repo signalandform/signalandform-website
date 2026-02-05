@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Pricing | Hilltop Truck Park",
-  description: "Admission, parking, and event pricing at Hilltop Truck Park in Justin, TX.",
+  description: "Admission, parking, and event pricing at Hilltop Truck Park in Northlake, TX.",
 };
 
 export default function PricingPage() {
@@ -29,7 +29,7 @@ export default function PricingPage() {
             <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
               Parking
             </h2>
-            <p className="text-htp-ink leading-[1.55]">Free parking is available on-site at 8356 Thompson Road, Justin, TX.</p>
+            <p className="text-htp-ink leading-[1.55]">Free parking is available on-site at 8150 Thompson Rd, Northlake, TX.</p>
           </div>
           <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
             <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">

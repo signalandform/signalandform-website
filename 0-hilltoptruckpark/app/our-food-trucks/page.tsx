@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Our Food Trucks | Hilltop Truck Park",
-  description: "Discover the rotating lineup of food trucks at Hilltop Truck Park in Justin, TX.",
+  description: "Discover the rotating lineup of food trucks at Hilltop Truck Park in Northlake, TX.",
 };
 
 export default function OurFoodTrucksPage() {
@@ -16,7 +16,7 @@ export default function OurFoodTrucksPage() {
         <div className="space-y-6 text-htp-ink leading-[1.55] mb-12">
           <p className="text-lg max-w-2xl">
             Hilltop Truck Park features a rotating lineup of local food trucks, bringing variety and
-            great eats to Justin, TX every week.
+            great eats to Northlake, TX every week.
           </p>
           <p>
             Our schedule changes regularly, so check our{" "}

@@ -1,6 +1,6 @@
 # Hilltop Truck Park Website
 
-Next.js 14 site for Hilltop Truck Park, a food truck court in Justin, TX. Hosted at `hilltoptruckpark.signalandform.net`.
+Next.js 14 site for Hilltop Truck Park, a food truck court in Northlake, TX. Hosted at `hilltoptruckpark.signalandform.net`.
 
 Part of the Signal & Form monorepo. Run from this directory.
 
