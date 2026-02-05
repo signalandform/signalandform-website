@@ -58,7 +58,10 @@ export default function HomePage() {
         </section>
 
         {/* What we do - overview */}
-        <section className="py-28 px-4 relative" style={{ background: warmOverlay }}>
+        <section
+          className="py-28 px-4 relative backdrop-blur-md"
+          style={{ background: warmOverlay }}
+        >
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display font-semibold text-display-md text-base mb-12 scroll-reveal">
             What we do
@@ -135,7 +138,10 @@ export default function HomePage() {
         </section>
 
         {/* CTA */}
-        <section className="py-28 px-4" style={{ background: warmOverlay }}>
+        <section
+          className="py-28 px-4 backdrop-blur-md"
+          style={{ background: warmOverlay }}
+        >
         <div className="max-w-3xl mx-auto text-center scroll-reveal">
           <h2 className="font-display font-semibold text-display-md text-base mb-6">
             Ready to get started?
