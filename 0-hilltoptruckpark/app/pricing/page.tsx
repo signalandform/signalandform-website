@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-content mx-auto">
+      <div className="max-w-content mx-auto text-center">
         <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
           Pricing
         </h1>
-        <p className="text-lg text-htp-ink leading-[1.55] mb-12 max-w-2xl">
+        <p className="text-lg text-htp-ink leading-[1.55] mb-12 max-w-2xl mx-auto">
           Hilltop Truck Park offers affordable admission and parking for visitors. Pricing may vary
           for special events, farmers markets, and themed nights.
         </p>
 
-        <div className="grid gap-6 mb-12">
+        <div className="grid gap-6 mb-12 max-w-2xl mx-auto text-left">
           <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
             <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
               General Admission
@@ -39,7 +39,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <p className="text-htp-ink leading-[1.55]">
+        <p className="text-htp-ink leading-[1.55] max-w-2xl mx-auto">
           For vendor pricing, market sign-ups, and special event details, visit our{" "}
           <Link href="/vendor-requests" className="text-htp-red hover:underline font-medium">
             Vendor Requests

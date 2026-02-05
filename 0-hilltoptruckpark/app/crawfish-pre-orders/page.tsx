@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 export default function CrawfishPreOrdersPage() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-content mx-auto">
+      <div className="max-w-content mx-auto text-center">
         <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
           Crawfish Pre-Orders
         </h1>
-        <div className="space-y-6 text-htp-ink leading-[1.55] mb-12 max-w-2xl">
+        <div className="space-y-6 text-htp-ink leading-[1.55] mb-12 max-w-2xl mx-auto">
           <p>
             Pre-order crawfish for pickup at Hilltop Truck Park. Check our{" "}
             <Link href="/events" className="text-htp-red hover:underline font-medium">

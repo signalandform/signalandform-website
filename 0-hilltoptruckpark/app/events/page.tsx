@@ -30,11 +30,11 @@ const events = [
 export default function EventsPage() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-content mx-auto">
+      <div className="max-w-content mx-auto text-center">
         <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
           This Week on the Hill
         </h1>
-        <p className="text-lg text-htp-ink leading-[1.55] mb-12 max-w-2xl">
+        <p className="text-lg text-htp-ink leading-[1.55] mb-12 max-w-2xl mx-auto">
           Hilltop Truck Park hosts farmers markets, live music, themed nights, crawfish boils, foam
           parties, and more throughout the year. Browse our events below.
         </p>

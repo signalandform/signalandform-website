@@ -15,16 +15,16 @@ const marketPlaceholders = Array.from({ length: 20 }, (_, i) => ({
 export default function MarketSignUpsPage() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-content mx-auto">
+      <div className="max-w-content mx-auto text-center">
         <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
           Market Sign-Ups
         </h1>
-        <p className="text-lg text-htp-ink leading-[1.55] mb-10 max-w-2xl">
+        <p className="text-lg text-htp-ink leading-[1.55] mb-10 max-w-2xl mx-auto">
           Hilltop Truck Park hosts farmers markets, twilight markets, and special vendor events
           throughout the year.
         </p>
 
-        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 mb-12">
+        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 mb-12 mx-auto max-w-2xl text-left">
           <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-4">
             Event Calendar (Coming Soon)
           </h2>
@@ -40,11 +40,11 @@ export default function MarketSignUpsPage() {
           </p>
         </div>
 
-        <div className="border-t border-htp-line pt-8 mb-12">
+        <div className="border-t border-htp-line pt-8 mb-12 max-w-2xl mx-auto text-left">
           <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-6">
             Regular Offerings
           </h2>
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-2 mb-6 justify-center">
             <span className="px-3 py-1 bg-htp-navy text-white rounded-full text-xs font-medium tracking-wider uppercase">
               FOOD
             </span>

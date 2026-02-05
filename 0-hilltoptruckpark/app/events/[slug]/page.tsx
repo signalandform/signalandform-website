@@ -51,14 +51,14 @@ export default async function EventDetailPage({ params }: Props) {
 
   return (
     <section className="py-24 px-4">
-      <div className="max-w-content mx-auto">
+      <div className="max-w-content mx-auto text-center">
         <Link
           href="/events"
           className="text-htp-red hover:underline text-sm mb-8 inline-block font-medium"
         >
           ← Back to Events
         </Link>
-        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 max-w-2xl">
+        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 max-w-2xl mx-auto">
           <h1 className="font-display text-htp-h1 md:text-4xl text-htp-navy uppercase tracking-[0.04em] mb-4">
             {event.title}
           </h1>

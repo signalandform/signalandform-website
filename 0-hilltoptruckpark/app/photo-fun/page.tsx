@@ -33,16 +33,16 @@ const galleryImages = [
 export default function PhotoFunPage() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-content mx-auto">
+      <div className="max-w-content mx-auto text-center">
         <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
           Photo Fun!
         </h1>
         <div className="space-y-8 text-htp-ink leading-[1.55] mb-12">
-          <p className="text-lg max-w-2xl">
+          <p className="text-lg max-w-2xl mx-auto">
             Hilltop Truck Park is the perfect spot for family photos, group shots, and making
             memories. Enjoy our outdoor setup, colorful murals, and seasonal activities.
           </p>
-          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 max-w-2xl mx-auto text-left">
             <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
               Foam Parties
             </h2>

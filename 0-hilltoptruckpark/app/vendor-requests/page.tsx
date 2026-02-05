@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function VendorRequestsPage() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-content mx-auto">
+      <div className="max-w-content mx-auto text-center">
         <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
           Hilltop Vendor Space Request
         </h1>
@@ -20,7 +20,7 @@ export default function VendorRequestsPage() {
           to book space, please fill out the form below.
         </p>
 
-        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 mb-12 max-w-2xl">
+        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 mb-12 max-w-2xl mx-auto text-left">
           <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-4">
             Note the following before proceeding
           </h2>

@@ -14,7 +14,7 @@ export default function PlaceholderForm({
   ],
 }: PlaceholderFormProps) {
   return (
-    <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 max-w-xl">
+    <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 max-w-xl mx-auto text-left">
       <h3 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-4">
         {title}
       </h3>
