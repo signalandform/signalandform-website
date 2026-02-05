@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getImageUrl } from "@/lib/imageMap";
+import ParallaxBackground from "@/components/ParallaxBackground";
+
+const warmOverlay =
+  "linear-gradient(180deg, rgba(247,243,236,0.75) 0%, rgba(245,240,232,0.75) 50%, rgba(232,226,216,0.75) 100%)";
 
 export default function HomePage() {
   const caseStudyImg1 = getImageUrl(
@@ -9,10 +13,18 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero - business overview */}
-      <section className="relative min-h-[100vh] flex items-center bg-gradient-to-b from-base via-base to-base-midtone px-4 sm:px-8 lg:px-12 py-20 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
+      <ParallaxBackground />
+      <div className="relative z-10">
+        {/* Hero - business overview */}
+        <section
+          className="relative min-h-[100vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 overflow-hidden"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(22,22,22,0.8) 0%, rgba(22,22,22,0.9) 50%, rgba(26,26,26,0.95) 100%)",
+          }}
+        >
+          <div
+            className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `radial-gradient(circle at 50% 50%, var(--accent-2) 1px, transparent 1px)`,
             backgroundSize: "48px 48px",
@@ -20,9 +32,8 @@ export default function HomePage() {
         />
         <div className="relative w-full max-w-6xl">
           <div className="max-w-2xl text-left">
-            <h1 className="font-display font-semibold text-display-2xl text-contrast mb-6 tracking-tight opacity-0 animate-hero-fade-up [animation-delay:0.1s] ">
-              <span className="block">Design</span>
-              <span className="block text-accent-2">&amp; Build</span>
+            <h1 className="font-display font-semibold text-display-2xl text-contrast mb-6 tracking-tight opacity-0 animate-hero-fade-up [animation-delay:0.1s] [text-wrap:balance]">
+              Design <span className="text-accent-2">&amp; Build</span>
             </h1>
             <p className="text-lg md:text-xl text-contrast-midtone mb-14 opacity-0 animate-hero-fade-up [animation-delay:0.25s] ">
               Signal &amp; Form is a Grapevine-based studio. We design brands, signage, and
@@ -44,10 +55,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* What we do - overview */}
-      <section className="py-28 px-4 relative" style={{ background: "var(--warm-gradient)" }}>
+        {/* What we do - overview */}
+        <section className="py-28 px-4 relative" style={{ background: warmOverlay }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display font-semibold text-display-md text-base mb-12 scroll-reveal">
             What we do
@@ -88,8 +99,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Case study teaser */}
-      <section id="casestudy" className="py-28 px-4 bg-base overflow-hidden">
+        {/* Case study teaser */}
+        <section id="casestudy" className="py-28 px-4 bg-base overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1 scroll-reveal">
@@ -121,13 +132,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section
-        className="py-28 px-4"
-        style={{ background: "var(--warm-gradient)" }}
-      >
+        {/* CTA */}
+        <section className="py-28 px-4" style={{ background: warmOverlay }}>
         <div className="max-w-3xl mx-auto text-center scroll-reveal">
           <h2 className="font-display font-semibold text-display-md text-base mb-6">
             Ready to get started?
@@ -142,7 +150,8 @@ export default function HomePage() {
             Get a quote
           </Link>
         </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
