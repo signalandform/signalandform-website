@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import workData from "@/lib/workData.json";
+import ParallaxBackground from "@/components/ParallaxBackground";
 
 type Project = { name: string; slug: string; images: string[] };
 
@@ -36,40 +37,39 @@ export default async function ClientWorkPage({
   if (!project) notFound();
 
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section
-        className="py-20 px-4"
-        style={{ background: "var(--warm-gradient)" }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <Link
-            href="/work"
-            className="inline-flex items-center gap-2 text-base-midtone hover:text-accent-2 transition-colors mb-8 text-sm font-medium"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+    <>
+      <ParallaxBackground />
+      <div className="relative z-10 min-h-screen">
+        {/* Hero */}
+        <section className="relative py-20 px-4 bg-base overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <Link
+              href="/work"
+              className="inline-flex items-center gap-2 text-contrast-midtone hover:text-accent-2 transition-colors mb-8 text-sm font-medium"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            Back to Work
-          </Link>
-          <h1 className="font-display font-semibold text-display-lg text-base scroll-reveal">
-            {project.name}
-          </h1>
-        </div>
-      </section>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              Back to Work
+            </Link>
+            <h1 className="font-display font-semibold text-display-lg text-contrast scroll-reveal">
+              {project.name}
+            </h1>
+          </div>
+        </section>
 
-      {/* Project images */}
-      <section className="py-16 px-4 bg-base">
+        {/* Project images */}
+        <section className="py-16 px-4 backdrop-blur-md shadow-lg shadow-black/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {project.images.map((src, idx) => (
@@ -88,7 +88,8 @@ export default async function ClientWorkPage({
             ))}
           </div>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
