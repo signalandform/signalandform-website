@@ -57,38 +57,38 @@ export default function HomePage() {
         {/* What we do - overview */}
         <section className="py-28 px-4 relative backdrop-blur-md border-b border-warm-border shadow-lg shadow-black/10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-display font-semibold text-display-md text-base mb-12 scroll-reveal">
+          <h2 className="font-display font-semibold text-display-md text-white mb-12 scroll-reveal">
             What we do
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <Link
               href="/solutions"
-              className="group block p-8 rounded-xl border border-warm-border bg-warm-bg/80 transition-all duration-300 hover:border-accent-3/50 hover:shadow-lg scroll-reveal"
+              className="group block p-8 rounded-xl border border-white/30 bg-base/20 transition-all duration-300 hover:border-accent-3/50 hover:shadow-lg scroll-reveal"
             >
-              <h3 className="font-display font-semibold text-xl text-base mb-3 group-hover:text-accent-3 transition-colors">
+              <h3 className="font-display font-semibold text-xl text-white mb-3 group-hover:text-accent-2 transition-colors">
                 Design, Print &amp; Wrap
               </h3>
-              <p className="text-base-midtone leading-relaxed mb-4">
+              <p className="text-white/90 leading-relaxed mb-4">
                 Vehicle wraps, custom signage, banners, flags, and event visuals for food trucks,
                 trailers, and local businesses. We handle design, print coordination, and install.
               </p>
-              <span className="text-accent-2 font-medium group-hover:text-accent-3 transition-colors">
+              <span className="text-accent-2 font-medium group-hover:text-accent-2 transition-colors">
                 Explore solutions →
               </span>
             </Link>
             <Link
               href="/products"
-              className="group block p-8 rounded-xl border border-warm-border bg-warm-bg/80 transition-all duration-300 hover:border-accent-3/50 hover:shadow-lg scroll-reveal"
+              className="group block p-8 rounded-xl border border-white/30 bg-base/20 transition-all duration-300 hover:border-accent-3/50 hover:shadow-lg scroll-reveal"
             >
-              <h3 className="font-display font-semibold text-xl text-base mb-3 group-hover:text-accent-3 transition-colors">
+              <h3 className="font-display font-semibold text-xl text-white mb-3 group-hover:text-accent-2 transition-colors">
                 Products
               </h3>
-              <p className="text-base-midtone leading-relaxed mb-4">
+              <p className="text-white/90 leading-relaxed mb-4">
                 TypeStrip (privacy-first text capture, on-device OCR) and CountrTop (restaurant
                 operations platform—one system, front to back). Product brands for retail, events,
                 and makers.
               </p>
-              <span className="text-accent-2 font-medium group-hover:text-accent-3 transition-colors">
+              <span className="text-accent-2 font-medium group-hover:text-accent-2 transition-colors">
                 See products →
               </span>
             </Link>
@@ -134,10 +134,10 @@ export default function HomePage() {
         {/* CTA */}
         <section className="py-28 px-4 backdrop-blur-md border-b border-warm-border shadow-lg shadow-black/10">
         <div className="max-w-3xl mx-auto text-center scroll-reveal">
-          <h2 className="font-display font-semibold text-display-md text-base mb-6">
+          <h2 className="font-display font-semibold text-display-md text-white mb-6">
             Ready to get started?
           </h2>
-          <p className="text-base-midtone mb-8">
+          <p className="text-white/90 mb-8">
             Whether you need a wrap, signage, or a product—we&apos;d love to hear about your project.
           </p>
           <Link

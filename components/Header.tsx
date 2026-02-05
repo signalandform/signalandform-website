@@ -22,6 +22,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   const linkClass =
     "text-sm font-medium text-contrast-midtone hover:text-accent-2 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-[-2px] after:h-px after:w-0 after:bg-accent-2 after:transition-all after:duration-300 hover:after:w-full";
 
