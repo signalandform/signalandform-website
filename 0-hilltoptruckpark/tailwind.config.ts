@@ -9,23 +9,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        base: "#1a1a1a",
-        "base-midtone": "#2d2d2d",
-        "contrast-midtone": "#b8b8b8",
-        contrast: "#FFFFFF",
-        accent: {
-          1: "#4a7c59",
-          2: "#8bc34a",
-          3: "#2d5a27",
-          4: "#6b9b6a",
-          5: "#a5d6a7",
-          6: "#1b3d1f",
-        },
+        "htp-red": "var(--htp-red)",
+        "htp-navy": "var(--htp-navy)",
+        "htp-ink": "var(--htp-ink)",
+        "htp-bg": "var(--htp-bg)",
+        "htp-cream": "var(--htp-cream)",
+        "htp-line": "var(--htp-line)",
+        "htp-success": "var(--htp-success)",
+        "htp-warning": "var(--htp-warning)",
+        "htp-danger": "var(--htp-danger)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-oswald)", "system-ui", "sans-serif"],
+      },
+      borderRadius: {
+        btn: "var(--radius-btn)",
+        card: "var(--radius-card)",
+      },
+      maxWidth: {
+        content: "1200px",
+      },
+      spacing: {
+        "18": "4.5rem",
+        "22": "5.5rem",
+        "30": "7.5rem",
+      },
+      fontSize: {
+        "htp-h1": ["3rem", { lineHeight: "1.05" }],
+        "htp-h2": ["2.125rem", { lineHeight: "1.15" }],
+        "htp-h3": ["1.5rem", { lineHeight: "1.2" }],
       },
     },
   },

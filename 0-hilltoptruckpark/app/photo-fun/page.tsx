@@ -14,21 +14,25 @@ export default function PhotoFunPage() {
   );
 
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-semibold text-contrast mb-8">Photo Fun!</h1>
-        <div className="space-y-8 text-contrast-midtone">
-          <p>
+    <section className="py-24 px-4">
+      <div className="max-w-content mx-auto">
+        <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
+          Photo Fun!
+        </h1>
+        <div className="space-y-8 text-htp-ink leading-[1.55] mb-12">
+          <p className="text-lg max-w-2xl">
             Hilltop Truck Park is the perfect spot for family photos, group shots, and making
             memories. Enjoy our outdoor setup, colorful murals, and seasonal activities.
           </p>
-          <div className="border-l-4 border-accent-1 pl-4">
-            <h2 className="text-xl font-medium text-contrast mb-2">Foam Parties</h2>
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
+            <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
+              Foam Parties
+            </h2>
             <p>
               Foam parties are held weekly during the summer! Check our{" "}
-<Link href="/events" className="text-accent-2 hover:underline">
-              Events
-            </Link>{" "}
+              <Link href="/events" className="text-htp-red hover:underline font-medium">
+                Events
+              </Link>{" "}
               calendar for dates and times.
             </p>
           </div>
@@ -37,14 +41,14 @@ export default function PhotoFunPage() {
             Park.
           </p>
         </div>
-        <div className="mt-12">
-          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+        <div>
+          <div className="relative w-full aspect-[4/3] rounded-card overflow-hidden">
             <Image
               src={img1}
               alt="Hilltop Truck Park"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
+              sizes="(max-width: 768px) 100vw, 1200px"
             />
           </div>
         </div>

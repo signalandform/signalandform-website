@@ -10,30 +10,42 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[400px] flex items-center justify-center bg-gradient-to-b from-base to-base-midtone px-4">
+      <section className="relative min-h-[400px] flex items-center justify-center bg-htp-bg px-4 py-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-contrast mb-6">
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/images/hilltop-logo.jpg"
+              alt="Hilltop Truck Park"
+              width={200}
+              height={80}
+              className="h-20 w-auto"
+            />
+          </div>
+          <h1 className="font-display text-htp-h1 md:text-5xl lg:text-[3.5rem] text-htp-navy uppercase tracking-[0.04em] mb-6">
             Hilltop Truck Park
           </h1>
-          <p className="text-lg md:text-xl text-contrast-midtone mb-8">
+          <p className="text-lg md:text-xl text-htp-ink/90 mb-8 leading-[1.55]">
+            Eat. Sip. Hang out.
+          </p>
+          <p className="text-base text-htp-ink/80 mb-10 max-w-xl mx-auto">
             Your local food truck court for great eats, events, and family fun in Justin, TX.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/events"
-              className="px-6 py-3 border-2 border-accent-2 text-accent-2 rounded-full font-medium hover:bg-accent-2 hover:text-base transition-colors"
+              className="px-8 py-3 bg-htp-red text-htp-bg rounded-btn font-medium hover:bg-[#a32e28] transition-colors"
             >
-              Upcoming Events
+              See what&apos;s on this week
             </Link>
             <Link
               href="/our-food-trucks"
-              className="px-6 py-3 border-2 border-accent-2 text-accent-2 rounded-full font-medium hover:bg-accent-2 hover:text-base transition-colors"
+              className="px-8 py-3 border-2 border-htp-navy text-htp-navy rounded-btn font-medium hover:bg-htp-navy/10 transition-colors"
             >
               Our Food Trucks
             </Link>
             <Link
               href="/contact-us"
-              className="px-6 py-3 border-2 border-accent-2 text-accent-2 rounded-full font-medium hover:bg-accent-2 hover:text-base transition-colors"
+              className="px-8 py-3 border-2 border-htp-navy text-htp-navy rounded-btn font-medium hover:bg-htp-navy/10 transition-colors"
             >
               Contact Us
             </Link>
@@ -41,29 +53,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Location & Contact */}
-      <section className="py-16 px-4 bg-base-midtone">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-contrast mb-4">Visit Us</h2>
-          <p className="text-lg text-contrast-midtone mb-2">8356 Thompson Road, Justin, TX 76247</p>
-          <a
-            href="mailto:info@hilltoptruckpark.com"
-            className="text-accent-2 hover:underline text-lg"
-          >
-            info@hilltoptruckpark.com
-          </a>
+      {/* This Week on the Hill / Location */}
+      <section className="py-24 px-4">
+        <div className="max-w-content mx-auto">
+          <h2 className="font-display text-htp-h2 md:text-4xl text-htp-navy uppercase tracking-[0.04em] text-center mb-12">
+            Visit Us
+          </h2>
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 max-w-2xl mx-auto text-center">
+            <p className="text-lg text-htp-ink mb-2">8356 Thompson Road, Justin, TX 76247</p>
+            <a
+              href="mailto:info@hilltoptruckpark.com"
+              className="text-htp-red hover:underline text-lg font-medium"
+            >
+              info@hilltoptruckpark.com
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Food Truck CTA */}
-      <section className="py-16 px-4 bg-base">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-contrast mb-4">
+      <section className="py-24 px-4 bg-htp-cream">
+        <div className="max-w-content mx-auto text-center">
+          <h2 className="font-display text-htp-h2 md:text-4xl text-htp-navy uppercase tracking-[0.04em] mb-6">
             Are you a Food Truck interested in scheduling with us?
           </h2>
           <Link
             href="/vendor-requests"
-            className="inline-block px-6 py-3 bg-accent-1 text-contrast rounded-full font-medium hover:bg-accent-2 transition-colors"
+            className="inline-block px-8 py-3 bg-htp-red text-htp-bg rounded-btn font-medium hover:bg-[#a32e28] transition-colors"
           >
             Click Here
           </Link>
@@ -71,15 +87,15 @@ export default function HomePage() {
       </section>
 
       {/* Image section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+      <section className="py-24 px-4">
+        <div className="max-w-content mx-auto">
+          <div className="relative w-full aspect-[4/3] rounded-card overflow-hidden">
             <Image
               src={heroImg}
               alt="Hilltop Truck Park"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 896px"
+              sizes="(max-width: 768px) 100vw, 1200px"
             />
           </div>
         </div>

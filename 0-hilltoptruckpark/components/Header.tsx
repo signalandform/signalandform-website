@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
@@ -17,21 +19,26 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-base border-b border-base-midtone">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-htp-navy border-b border-htp-navy/80">
+      <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link
-            href="/"
-            className="text-xl font-semibold text-contrast hover:text-accent-2 transition-colors"
-          >
-            Hilltop Truck Park
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/hilltop-logo.jpg"
+              alt="Hilltop Truck Park"
+              width={160}
+              height={44}
+              className="h-11 w-auto"
+              priority
+            />
           </Link>
           <button
             type="button"
-            className="md:hidden p-2 text-contrast"
+            className="md:hidden p-2 text-htp-bg"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle menu"
@@ -45,20 +52,27 @@ export default function Header() {
             </svg>
           </button>
           <nav
-            className={`${mobileMenuOpen ? "block" : "hidden"} md:flex absolute md:relative top-[73px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-base md:bg-transparent border-b md:border-b-0 border-base-midtone md:border-0 py-4 md:py-0 px-4 md:px-0 z-10 max-h-[70vh] md:max-h-none overflow-y-auto md:overflow-visible`}
+            className={`${mobileMenuOpen ? "block" : "hidden"} md:flex absolute md:relative top-[73px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-htp-navy md:bg-transparent border-b md:border-b-0 border-htp-navy/80 md:border-0 py-4 md:py-0 px-4 md:px-0 z-10 max-h-[70vh] md:max-h-none overflow-y-auto md:overflow-visible`}
             aria-label="Main navigation"
           >
             <div className="flex flex-col md:flex-row md:items-center md:flex-wrap gap-4 md:gap-6">
-              {navLinks.map((link) => (
+              {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+              return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-contrast-midtone hover:text-accent-2 transition-colors"
+                  className={`text-sm transition-colors ${
+                    isActive
+                      ? "text-htp-bg border-b-2 border-htp-red pb-1"
+                      : "text-htp-bg/90 hover:text-htp-red"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
-              ))}
+              );
+            })}
             </div>
           </nav>
         </div>

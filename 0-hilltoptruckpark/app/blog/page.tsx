@@ -18,23 +18,25 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-semibold text-contrast mb-8">Blog</h1>
-        <p className="text-contrast-midtone mb-12">
+    <section className="py-24 px-4">
+      <div className="max-w-content mx-auto">
+        <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
+          Blog
+        </h1>
+        <p className="text-htp-ink leading-[1.55] mb-12 max-w-2xl">
           News, updates, and announcements from Hilltop Truck Park.
         </p>
         <div className="space-y-8">
           {posts.map((post) => (
-            <article key={post.slug} className="border-b border-base-midtone pb-8">
-              <h2 className="text-2xl font-medium text-contrast mb-2">
-                <Link href={`/blog/${post.slug}`} className="hover:text-accent-2 transition-colors">
+            <article key={post.slug} className="border-b border-htp-line pb-8">
+              <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
+                <Link href={`/blog/${post.slug}`} className="hover:text-htp-red transition-colors">
                   {post.title}
                 </Link>
               </h2>
               <time
                 dateTime={post.date}
-                className="text-sm text-contrast-midtone block mb-4"
+                className="text-sm text-htp-ink/80 block mb-4"
               >
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -42,10 +44,10 @@ export default function BlogPage() {
                   day: "numeric",
                 })}
               </time>
-              <p className="text-contrast-midtone">{post.excerpt}</p>
+              <p className="text-htp-ink leading-[1.55]">{post.excerpt}</p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="inline-block mt-4 text-accent-2 hover:underline font-medium"
+                className="inline-block mt-4 text-htp-red hover:underline font-medium"
               >
                 Read more
               </Link>

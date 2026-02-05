@@ -14,27 +14,29 @@ export default function PlaceholderForm({
   ],
 }: PlaceholderFormProps) {
   return (
-    <div className="bg-base-midtone rounded-lg p-8 max-w-xl">
-      <h3 className="text-xl font-medium text-contrast mb-4">{title}</h3>
-      <p className="text-contrast-midtone mb-6">{message}</p>
+    <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 max-w-xl">
+      <h3 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-4">
+        {title}
+      </h3>
+      <p className="text-htp-ink leading-[1.55] mb-6">{message}</p>
       <div className="space-y-4 opacity-60 pointer-events-none">
         {fields.map((field) => (
           <div key={field.name}>
-            <label className="block text-sm font-medium text-contrast-midtone mb-2">
+            <label className="block text-sm font-medium text-htp-ink mb-2">
               {field.label}
             </label>
             {field.type === "textarea" ? (
               <textarea
                 name={field.name}
                 rows={4}
-                className="w-full px-3 py-2 bg-base border border-base-midtone rounded text-contrast"
+                className="w-full px-3 py-2 bg-htp-bg border border-htp-line rounded-btn text-htp-ink"
                 disabled
               />
             ) : (
               <input
                 type={field.type || "text"}
                 name={field.name}
-                className="w-full px-3 py-2 bg-base border border-base-midtone rounded text-contrast"
+                className="w-full px-3 py-2 bg-htp-bg border border-htp-line rounded-btn text-htp-ink"
                 disabled
               />
             )}
@@ -42,7 +44,7 @@ export default function PlaceholderForm({
         ))}
         <button
           type="button"
-          className="px-6 py-2 bg-accent-1 text-contrast rounded font-medium"
+          className="px-6 py-2 bg-htp-red text-htp-bg rounded-btn font-medium"
           disabled
         >
           Submit

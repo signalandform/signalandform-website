@@ -8,40 +8,48 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-semibold text-contrast mb-8">Pricing</h1>
-        <div className="space-y-8 text-contrast-midtone">
-          <p>
-            Hilltop Truck Park offers affordable admission and parking for visitors. Pricing may vary
-            for special events, farmers markets, and themed nights.
-          </p>
-          <div className="grid gap-6">
-            <div className="border-l-4 border-accent-1 pl-4">
-              <h2 className="text-xl font-medium text-contrast mb-2">General Admission</h2>
-              <p>Free admission to the park. Enjoy the food trucks, playground, and atmosphere.</p>
-            </div>
-            <div className="border-l-4 border-accent-1 pl-4">
-              <h2 className="text-xl font-medium text-contrast mb-2">Parking</h2>
-              <p>Free parking is available on-site at 8356 Thompson Road, Justin, TX.</p>
-            </div>
-            <div className="border-l-4 border-accent-1 pl-4">
-              <h2 className="text-xl font-medium text-contrast mb-2">Food &amp; Drinks</h2>
-              <p>Purchases are made directly from our rotating food trucks. Each truck sets its own prices.</p>
-            </div>
+    <section className="py-24 px-4">
+      <div className="max-w-content mx-auto">
+        <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
+          Pricing
+        </h1>
+        <p className="text-lg text-htp-ink leading-[1.55] mb-12 max-w-2xl">
+          Hilltop Truck Park offers affordable admission and parking for visitors. Pricing may vary
+          for special events, farmers markets, and themed nights.
+        </p>
+
+        <div className="grid gap-6 mb-12">
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
+            <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
+              General Admission
+            </h2>
+            <p className="text-htp-ink leading-[1.55]">Free admission to the park. Enjoy the food trucks, playground, and atmosphere.</p>
           </div>
-          <p>
-            For vendor pricing, market sign-ups, and special event details, visit our{" "}
-            <Link href="/vendor-requests" className="text-accent-2 hover:underline">
-              Vendor Requests
-            </Link>{" "}
-            page or contact us at{" "}
-            <a href="mailto:info@hilltoptruckpark.com" className="text-accent-2 hover:underline">
-              info@hilltoptruckpark.com
-            </a>
-            .
-          </p>
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
+            <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
+              Parking
+            </h2>
+            <p className="text-htp-ink leading-[1.55]">Free parking is available on-site at 8356 Thompson Road, Justin, TX.</p>
+          </div>
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
+            <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
+              Food &amp; Drinks
+            </h2>
+            <p className="text-htp-ink leading-[1.55]">Purchases are made directly from our rotating food trucks. Each truck sets its own prices.</p>
+          </div>
         </div>
+
+        <p className="text-htp-ink leading-[1.55]">
+          For vendor pricing, market sign-ups, and special event details, visit our{" "}
+          <Link href="/vendor-requests" className="text-htp-red hover:underline font-medium">
+            Vendor Requests
+          </Link>{" "}
+          page or contact us at{" "}
+          <a href="mailto:info@hilltoptruckpark.com" className="text-htp-red hover:underline font-medium">
+            info@hilltoptruckpark.com
+          </a>
+          .
+        </p>
       </div>
     </section>
   );

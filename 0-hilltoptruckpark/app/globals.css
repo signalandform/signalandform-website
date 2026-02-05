@@ -3,16 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #1a1a1a;
-  --foreground: #ffffff;
-  --accent-1: #4a7c59;
-  --accent-2: #8bc34a;
-  --accent-3: #2d5a27;
+  --htp-red: #C73A34;
+  --htp-navy: #2E3F52;
+  --htp-ink: #1F2328;
+  --htp-bg: #F6F1EC;
+  --htp-cream: #FBF7F3;
+  --htp-line: #D8D0C8;
+  --htp-success: #1E7A5A;
+  --htp-warning: #B7791F;
+  --htp-danger: #B3261E;
+  --radius-btn: 12px;
+  --radius-card: 16px;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--htp-ink);
+  background: var(--htp-bg);
 }
 
 @layer utilities {

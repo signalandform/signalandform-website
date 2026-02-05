@@ -8,17 +8,19 @@ export const metadata: Metadata = {
 
 export default function VendorRequestsPage() {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-semibold text-contrast mb-8">Vendor Requests</h1>
-        <div className="space-y-6 text-contrast-midtone mb-12">
+    <section className="py-24 px-4">
+      <div className="max-w-content mx-auto">
+        <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
+          Vendor Requests
+        </h1>
+        <div className="space-y-6 text-htp-ink leading-[1.55] mb-12 max-w-2xl">
           <p>
             Interested in scheduling your food truck or becoming a vendor at our farmers markets and
             events? Fill out the form below and we&apos;ll get back to you.
           </p>
           <p>
             Form coming soon. In the meantime, please email{" "}
-            <a href="mailto:info@hilltoptruckpark.com" className="text-accent-2 hover:underline">
+            <a href="mailto:info@hilltoptruckpark.com" className="text-htp-red hover:underline font-medium">
               info@hilltoptruckpark.com
             </a>{" "}
             with your inquiry.

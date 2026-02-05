@@ -8,22 +8,28 @@ export const metadata: Metadata = {
 
 export default function ContactUsPage() {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-semibold text-contrast mb-8">Contact Us</h1>
-        <div className="space-y-8 text-contrast-midtone mb-12">
-          <p>
+    <section className="py-24 px-4">
+      <div className="max-w-content mx-auto">
+        <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-8">
+          Contact Us
+        </h1>
+        <div className="space-y-8 text-htp-ink leading-[1.55] mb-12">
+          <p className="text-lg max-w-2xl">
             Have questions? Reach out to us at Hilltop Truck Park. We&apos;d love to hear from you.
           </p>
-          <div>
-            <h2 className="text-xl font-medium text-contrast mb-2">Address</h2>
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-6">
+            <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
+              Address
+            </h2>
             <p>8356 Thompson Road, Justin, TX 76247</p>
           </div>
-          <div>
-            <h2 className="text-xl font-medium text-contrast mb-2">Email</h2>
+          <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-6">
+            <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-2">
+              Email
+            </h2>
             <a
               href="mailto:info@hilltoptruckpark.com"
-              className="text-accent-2 hover:underline"
+              className="text-htp-red hover:underline font-medium"
             >
               info@hilltoptruckpark.com
             </a>

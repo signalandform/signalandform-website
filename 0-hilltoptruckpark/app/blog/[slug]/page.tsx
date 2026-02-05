@@ -12,19 +12,19 @@ const posts: Record<
     author: "Rebecca Williams",
     content: (
       <>
-        <p className="mb-6">
+        <p className="mb-6 text-htp-ink leading-[1.55]">
           Hello friends and welcome to our first blog post! To kick off our new page, we thought a
           peek into what to expect for 2025 would be a great place to start.
         </p>
-        <p className="mb-4">Here are the highlights:</p>
-        <ul className="list-disc list-inside space-y-2 mb-6 text-contrast-midtone">
+        <p className="mb-4 text-htp-ink leading-[1.55]">Here are the highlights:</p>
+        <ul className="list-disc list-inside space-y-2 mb-6 text-htp-ink leading-[1.55]">
           <li>Mounted, infrared heaters on both sides of the seating area</li>
           <li>Adjustable, wrap-around enclosures on both sides of the seating area</li>
           <li>New overhead lighting on both sides of the seating area</li>
           <li>Jellyfish lighting around the building to add ambiance and a cozy feel</li>
           <li>EVENTS! So many events coming in 2025</li>
         </ul>
-        <p>
+        <p className="text-htp-ink leading-[1.55]">
           We&apos;re excited for the year ahead and can&apos;t wait to share it with you. Stay tuned
           for more updates!
         </p>
@@ -57,17 +57,19 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-3xl mx-auto">
+    <section className="py-24 px-4">
+      <div className="max-w-content mx-auto">
         <Link
           href="/blog"
-          className="text-accent-2 hover:underline text-sm mb-8 inline-block"
+          className="text-htp-red hover:underline text-sm mb-8 inline-block font-medium"
         >
           ← Back to Blog
         </Link>
         <article>
-          <h1 className="text-4xl font-semibold text-contrast mb-4">{post.title}</h1>
-          <div className="flex gap-4 text-sm text-contrast-midtone mb-8">
+          <h1 className="font-display text-htp-h1 md:text-5xl text-htp-navy uppercase tracking-[0.04em] mb-4">
+            {post.title}
+          </h1>
+          <div className="flex gap-4 text-sm text-htp-ink/80 mb-8">
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
@@ -77,7 +79,7 @@ export default async function BlogPostPage({ params }: Props) {
             </time>
             {post.author && <span>by {post.author}</span>}
           </div>
-          <div className="prose prose-invert max-w-none text-contrast-midtone">
+          <div className="text-htp-ink leading-[1.55]">
             {post.content}
           </div>
         </article>

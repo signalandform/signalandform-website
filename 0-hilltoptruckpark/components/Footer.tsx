@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -15,17 +16,23 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-base border-t border-base-midtone">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-htp-navy border-t border-htp-navy/80">
+      <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div>
-            <Link href="/" className="text-lg font-semibold text-contrast hover:text-accent-2">
-              Hilltop Truck Park
+            <Link href="/" className="inline-block mb-3">
+              <Image
+                src="/images/hilltop-logo.jpg"
+                alt="Hilltop Truck Park"
+                width={140}
+                height={40}
+                className="h-10 w-auto opacity-95"
+              />
             </Link>
-            <p className="mt-2 text-contrast-midtone text-sm">
+            <p className="text-htp-bg/90 text-sm">
               8356 Thompson Road, Justin, TX 76247
               <br />
-              <a href="mailto:info@hilltoptruckpark.com" className="text-accent-2 hover:underline">
+              <a href="mailto:info@hilltoptruckpark.com" className="text-htp-red hover:underline">
                 info@hilltoptruckpark.com
               </a>
             </p>
@@ -35,7 +42,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-contrast-midtone hover:text-accent-2 transition-colors"
+                className="text-sm text-htp-bg/90 hover:text-htp-red transition-colors"
               >
                 {link.label}
               </Link>
