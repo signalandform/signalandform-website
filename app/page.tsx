@@ -13,20 +13,7 @@ export default function HomePage() {
       <ParallaxBackground />
       <div className="relative z-10">
         {/* Hero - business overview */}
-        <section
-          className="relative min-h-[100vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 overflow-hidden"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(22,22,22,0.8) 0%, rgba(22,22,22,0.9) 50%, rgba(26,26,26,0.95) 100%)",
-          }}
-        >
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 50% 50%, var(--accent-2) 1px, transparent 1px)`,
-            backgroundSize: "48px 48px",
-          }}
-        />
+        <section className="relative min-h-[100vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 overflow-hidden bg-base">
         <div className="relative w-full max-w-6xl">
           <div className="max-w-2xl text-left">
             <h1 className="font-display font-semibold text-display-2xl text-contrast mb-6 tracking-tight opacity-0 animate-hero-fade-up [animation-delay:0.1s] [text-wrap:balance]">
