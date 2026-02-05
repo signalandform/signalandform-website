@@ -7,16 +7,14 @@ const navLinks = [
   { href: "/solutions", label: "Solutions" },
   { href: "/work", label: "Work" },
   { href: "/contact", label: "Contact" },
-  { href: "https://www.etsy.com/shop/SignalandFormLLC", label: "Shop", external: true },
-  { href: "https://www.typestrip.com", label: "TypeStrip", external: true },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-base border-t border-base-midtone">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          <div>
             <Link href="/" className="inline-block group">
               <Image
                 src="/brand/logos/IMG_0122.PNG"
@@ -50,38 +48,15 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-semibold text-contrast mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-3" aria-label="Footer navigation">
-              {navLinks
-                .filter((l) => !l.external)
-                .map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-contrast-midtone hover:text-accent-2 font-medium transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-            </nav>
-          </div>
-          <div>
-            <h4 className="font-display font-semibold text-contrast mb-4">Elsewhere</h4>
-            <nav className="flex flex-col gap-3">
-              <a
-                href="https://www.etsy.com/shop/SignalandFormLLC"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-contrast-midtone hover:text-accent-2 font-medium transition-colors"
-              >
-                Etsy Shop
-              </a>
-              <a
-                href="https://www.typestrip.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-contrast-midtone hover:text-accent-2 font-medium transition-colors"
-              >
-                TypeStrip
-              </a>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-contrast-midtone hover:text-accent-2 font-medium transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>

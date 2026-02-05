@@ -10,8 +10,6 @@ const navLinks = [
   { href: "/solutions", label: "Solutions" },
   { href: "/work", label: "Work" },
   { href: "/contact", label: "Contact" },
-  { href: "https://www.etsy.com/shop/SignalandFormLLC", label: "Shop", external: true },
-  { href: "https://www.typestrip.com", label: "TypeStrip", external: true },
 ];
 
 export default function Header() {
@@ -65,29 +63,16 @@ export default function Header() {
             aria-label="Main navigation"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-              {navLinks.map((link) =>
-                link.external ? (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={linkClass}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={linkClass}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                )
-              )}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={linkClass}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </nav>
         </div>
