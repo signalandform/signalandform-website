@@ -3,9 +3,6 @@ import Image from "next/image";
 import { getImageUrl } from "@/lib/imageMap";
 import ParallaxBackground from "@/components/ParallaxBackground";
 
-const warmOverlay =
-  "linear-gradient(180deg, rgba(247,243,236,0.75) 0%, rgba(245,240,232,0.75) 50%, rgba(232,226,216,0.75) 100%)";
-
 export default function HomePage() {
   const caseStudyImg1 = getImageUrl(
     "https://signalandformllc.com/wp-content/uploads/2025/10/IMG_0233.jpg"
@@ -59,8 +56,8 @@ export default function HomePage() {
 
         {/* What we do - overview */}
         <section
-          className="py-28 px-4 relative backdrop-blur-md"
-          style={{ background: warmOverlay }}
+          className="py-28 px-4 relative backdrop-blur-md border-b border-warm-border shadow-lg shadow-black/10"
+          style={{ background: "rgba(245, 240, 232, 0.95)" }}
         >
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display font-semibold text-display-md text-base mb-12 scroll-reveal">
@@ -139,8 +136,8 @@ export default function HomePage() {
 
         {/* CTA */}
         <section
-          className="py-28 px-4 backdrop-blur-md"
-          style={{ background: warmOverlay }}
+          className="py-28 px-4 backdrop-blur-md border-b border-warm-border shadow-lg shadow-black/10"
+          style={{ background: "rgba(245, 240, 232, 0.95)" }}
         >
         <div className="max-w-3xl mx-auto text-center scroll-reveal">
           <h2 className="font-display font-semibold text-display-md text-base mb-6">
