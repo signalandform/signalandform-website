@@ -5,11 +5,9 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
   { href: "/our-food-trucks", label: "Our Food Trucks" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/blog", label: "Blog" },
   { href: "/online-store", label: "Online Store" },
   { href: "/crawfish-pre-orders", label: "Crawfish Pre-orders" },
-  { href: "/photo-fun", label: "Photo Fun" },
+  { href: "/photo-fun", label: "Photo Fun!" },
   { href: "/vendor-requests", label: "Vendor Requests" },
   { href: "/contact-us", label: "Contact" },
 ];
@@ -24,12 +22,12 @@ export default function Footer() {
               <Image
                 src="/images/hilltop-logo.jpg"
                 alt="Hilltop Truck Park"
-                width={140}
-                height={40}
-                className="h-10 w-auto opacity-95"
+                width={168}
+                height={48}
+                className="h-12 w-auto opacity-95"
               />
             </Link>
-            <p className="text-htp-bg/90 text-sm">
+            <p className="text-white/90 text-sm">
               8356 Thompson Road, Justin, TX 76247
               <br />
               <a href="mailto:info@hilltoptruckpark.com" className="text-htp-red hover:underline">
@@ -42,7 +40,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-htp-bg/90 hover:text-htp-red transition-colors"
+                className="text-sm text-white/90 hover:text-htp-red transition-colors"
               >
                 {link.label}
               </Link>

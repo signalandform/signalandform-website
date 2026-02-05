@@ -27,7 +27,7 @@ export default function OurFoodTrucksPage() {
           </p>
         </div>
 
-        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8">
+        <div className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-8 mb-12">
           <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-4">
             Interested in Joining Us?
           </h2>
@@ -43,6 +43,35 @@ export default function OurFoodTrucksPage() {
             </a>
             .
           </p>
+        </div>
+
+        <h2 className="font-display text-htp-h3 text-htp-navy uppercase tracking-[0.04em] mb-6">
+          Our Trucks
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { name: "Taco Truck", cuisine: "Tex-Mex", blurb: "Fresh tacos, burritos, and more." },
+            { name: "BBQ Pit Stop", cuisine: "BBQ", blurb: "Slow-smoked meats and classic sides." },
+            { name: "Burgers & Fries", cuisine: "American", blurb: "Juicy burgers and hand-cut fries." },
+            { name: "Sushi Roll", cuisine: "Japanese", blurb: "Fresh rolls and poke bowls." },
+            { name: "Sweet Treats", cuisine: "Desserts", blurb: "Ice cream, shaved ice, and more." },
+            { name: "Pizza on Wheels", cuisine: "Italian", blurb: "Wood-fired pies and calzones." },
+            { name: "Pho King Good", cuisine: "Vietnamese", blurb: "Noodle bowls and banh mi." },
+            { name: "Smokehouse", cuisine: "BBQ", blurb: "Texas-style smoked brisket." },
+            { name: "Breakfast Burrito Co", cuisine: "Breakfast", blurb: "Morning fuel on the go." },
+            { name: "Elote & More", cuisine: "Street Food", blurb: "Mexican street corn and snacks." },
+          ].map((truck, i) => (
+            <div
+              key={i}
+              className="bg-htp-cream border border-htp-line rounded-card shadow-sm p-6"
+            >
+              <h3 className="font-display text-lg text-htp-navy uppercase tracking-[0.04em] mb-1">
+                {truck.name}
+              </h3>
+              <p className="text-sm text-htp-red mb-3">{truck.cuisine}</p>
+              <p className="text-htp-ink text-sm leading-[1.55]">{truck.blurb}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

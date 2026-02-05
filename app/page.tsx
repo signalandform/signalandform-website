@@ -18,8 +18,8 @@ export default function HomePage() {
             backgroundSize: "48px 48px",
           }}
         />
-        <div className="relative w-full max-w-6xl ml-auto">
-          <div className="max-w-2xl ml-auto text-right">
+        <div className="relative w-full max-w-6xl">
+          <div className="max-w-2xl text-left">
             <h1 className="font-display font-semibold text-display-2xl text-contrast mb-6 tracking-tight opacity-0 animate-hero-fade-up [animation-delay:0.1s] ">
               <span className="block">Design</span>
               <span className="block text-accent-2">&amp; Build</span>
@@ -76,8 +76,9 @@ export default function HomePage() {
                 Products
               </h3>
               <p className="text-base-midtone leading-relaxed mb-4">
-                TypeStrip (typography products in beta) and CountrTop (restaurant operations
-                platform—one system, front to back). Product brands for retail, events, and makers.
+                TypeStrip (privacy-first text capture, on-device OCR) and CountrTop (restaurant
+                operations platform—one system, front to back). Product brands for retail, events,
+                and makers.
               </p>
               <span className="text-accent-2 font-medium group-hover:text-accent-3 transition-colors">
                 See products →

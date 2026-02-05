@@ -76,7 +76,7 @@ export default function ContactPage() {
                 href="tel:2148032520"
                 className="block text-accent-2 font-medium hover:text-accent-1 transition-colors"
               >
-                214 803 2520
+                214 444 8889
               </a>
               <a
                 href="mailto:jack@signalandformllc.com"

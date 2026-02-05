@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Products | Signal & Form",
   description:
-    "TypeStrip and CountrTop — product brands from Signal & Form. Typography products and a restaurant operations platform.",
+    "TypeStrip and CountrTop — product brands from Signal & Form. Privacy-first text capture and a restaurant operations platform.",
 };
 
 export default function ProductsPage() {
@@ -20,13 +20,14 @@ export default function ProductsPage() {
           </h1>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {/* TypeStrip */}
+            {/* TypeStrip - intro card */}
             <div className="group rounded-xl border border-base-midtone bg-base-midtone/30 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent-3/50 hover:shadow-xl hover:shadow-accent-3/10 scroll-reveal">
               <h2 className="font-display font-semibold text-2xl text-contrast mb-4">
                 TypeStrip
               </h2>
               <p className="text-contrast-midtone leading-relaxed mb-6">
-                Typography products in beta. Register for an invite and join the beta tester community.
+                A privacy-first text capture tool that turns the real world into usable data—instantly,
+                and entirely on-device.
               </p>
               <a
                 href="https://typestrip.com"
@@ -62,6 +63,81 @@ export default function ProductsPage() {
                 </svg>
               </a>
             </div>
+          </div>
+
+          {/* TypeStrip - full section */}
+          <div className="mt-24 scroll-reveal">
+            <h2 className="font-display font-semibold text-display-md text-contrast mb-6">
+              TypeStrip
+            </h2>
+            <p className="text-contrast-midtone leading-relaxed mb-6 max-w-3xl">
+              TypeStrip is a privacy-first text capture tool that turns the real world into usable
+              data—instantly, and entirely on-device.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-6 max-w-3xl">
+              Built for moments when typing isn&apos;t practical, TypeStrip lets users point their camera
+              at anything with text—receipts, labels, signs, documents—and extract clean, selectable text
+              in seconds. No cloud processing. No data harvesting. No friction.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-6 max-w-3xl">
+              Unlike traditional scanner apps, TypeStrip is designed around trust and speed. All text
+              recognition runs locally using Apple&apos;s on-device Vision OCR, meaning images never leave
+              the device unless the user explicitly chooses to save or sync them. This makes TypeStrip
+              ideal for sensitive information, quick lookups, and everyday capture without surveillance.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-6 max-w-3xl">
+              The interface is intentionally minimal: a fluid, camera-first experience with a soft
+              &quot;liquid glass&quot; aesthetic that keeps the focus on what matters—the text itself.
+              There&apos;s no forced account creation, no dark patterns, and no bloated feature set. Just
+              fast extraction, smart detection, and user-controlled history.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-8 max-w-3xl">
+              TypeStrip is free to use with daily scan limits, with optional accounts for cross-device
+              sync and future advanced parsing features. It&apos;s a foundation for a larger vision: tools
+              that respect users by default, and make powerful technology feel calm, invisible, and humane.
+            </p>
+
+            <h3 className="font-display font-semibold text-xl text-contrast mb-4">
+              Core principles
+            </h3>
+            <ul className="space-y-2 text-contrast-midtone mb-8 max-w-3xl">
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Privacy-first by design (on-device OCR, no automatic image storage)
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Instant text extraction from the camera
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Lightweight, focused UX
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Optional accounts and syncing—never required
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Built to scale into smarter parsing without sacrificing trust
+              </li>
+            </ul>
+
+            <p className="text-contrast-midtone leading-relaxed max-w-3xl mb-12 italic">
+              TypeStrip is not about scanning more—it&apos;s about thinking less while capturing what matters.
+            </p>
+
+            <a
+              href="https://typestrip.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300"
+            >
+              Visit TypeStrip
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
 
           {/* CountrTop - full section */}
