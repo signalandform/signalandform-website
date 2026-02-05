@@ -22,29 +22,27 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
-    } else {
-      document.documentElement.style.overflow = "";
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.documentElement.style.overflow = "";
-      document.body.style.overflow = "";
-    };
-  }, [mobileMenuOpen]);
-
   const linkClass =
     "text-sm font-medium text-contrast-midtone hover:text-accent-2 transition-colors duration-300 relative after:absolute after:left-0 after:bottom-[-2px] after:h-px after:w-0 after:bg-accent-2 after:transition-all after:duration-300 hover:after:w-full";
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-base/95 backdrop-blur-md border-b border-base-midtone shadow-lg shadow-black/10" : "bg-transparent"
-      }`}
-    >
+    <>
+      {/* Overlay to block background scroll when menu is open (no body overflow lock) */}
+      <div
+        aria-hidden
+        className="fixed inset-0 z-40 md:hidden"
+        style={{
+          visibility: mobileMenuOpen ? "visible" : "hidden",
+          pointerEvents: mobileMenuOpen ? "auto" : "none",
+          touchAction: "none",
+        }}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+      <header
+        className={`${mobileMenuOpen ? "fixed left-0 right-0 top-0" : "sticky top-0"} z-50 transition-all duration-300 ${
+          scrolled ? "bg-base/95 backdrop-blur-md border-b border-base-midtone shadow-lg shadow-black/10" : "bg-transparent"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center group">
@@ -92,5 +90,6 @@ export default function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }
