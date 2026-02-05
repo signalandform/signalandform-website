@@ -72,7 +72,7 @@ export default function HomePage() {
                 Vehicle wraps, custom signage, banners, flags, and event visuals for food trucks,
                 trailers, and local businesses. We handle design, print coordination, and install.
               </p>
-              <span className="text-accent-2 font-medium group-hover:text-accent-2 transition-colors">
+              <span className="text-white font-medium group-hover:text-accent-2 transition-colors">
                 Explore solutions →
               </span>
             </Link>
@@ -88,7 +88,7 @@ export default function HomePage() {
                 operations platform—one system, front to back). Product brands for retail, events,
                 and makers.
               </p>
-              <span className="text-accent-2 font-medium group-hover:text-accent-2 transition-colors">
+              <span className="text-white font-medium group-hover:text-accent-2 transition-colors">
                 See products →
               </span>
             </Link>
@@ -142,7 +142,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300 hover:scale-105"
+            className="inline-block px-10 py-4 bg-accent-1 text-white font-medium rounded-full hover:bg-accent-2 transition-all duration-300 hover:scale-105"
           >
             Get a quote
           </Link>
