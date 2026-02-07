@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import workData from "@/lib/workData.json";
-import ParallaxBackground from "@/components/ParallaxBackground";
 
 type Project = { name: string; slug: string; images: string[] };
 
@@ -38,7 +37,6 @@ export default async function ClientWorkPage({
 
   return (
     <>
-      <ParallaxBackground />
       <div className="relative z-10 min-h-screen">
         {/* Hero */}
         <section className="relative py-20 px-4 bg-base overflow-hidden">
