@@ -27,6 +27,42 @@ body {
   font-size: 1.0625rem;
 }
 
+/* Site-wide background treatment (dark + liquid glass friendly)
+   No scroll-coupled parallax; stays calm and premium. */
+.site-bg {
+  background:
+    radial-gradient(800px 500px at 20% 15%, rgba(140, 197, 232, 0.14), transparent 60%),
+    radial-gradient(900px 600px at 80% 20%, rgba(123, 184, 212, 0.10), transparent 55%),
+    radial-gradient(900px 700px at 50% 90%, rgba(44, 79, 100, 0.22), transparent 60%),
+    linear-gradient(180deg, #0f0f10 0%, #151517 45%, #121214 100%);
+}
+
+/* Add a subtle grain layer */
+.site-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.12;
+}
+
+/* Add a soft vignette */
+.site-bg::after {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background: radial-gradient(circle at 50% 40%, transparent 35%, rgba(0, 0, 0, 0.55) 100%);
+  opacity: 0.55;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-bg::before,
+  .site-bg::after {
+    transition: none;
+  }
+}
+
 /* Reduced motion: disable or simplify animations */
 @media (prefers-reduced-motion: reduce) {
   *,

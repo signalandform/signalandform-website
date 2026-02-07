@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getImageUrl } from "@/lib/imageMap";
-import ParallaxBackground from "@/components/ParallaxBackground";
 
 export default function HomePage() {
   const caseStudyImg1 = getImageUrl(
@@ -10,31 +9,32 @@ export default function HomePage() {
 
   return (
     <>
-      <ParallaxBackground />
       <div className="relative z-10">
         {/* Hero - business overview */}
         <section className="relative min-h-[100vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 overflow-hidden bg-base">
         <div className="relative w-full max-w-6xl">
           <div className="max-w-2xl text-left">
             <h1 className="font-display font-semibold text-display-2xl text-contrast mb-6 tracking-tight opacity-0 animate-hero-fade-up [animation-delay:0.1s] [text-wrap:balance]">
-              Design <span className="text-accent-2">&amp; Build</span>
+              Design <span className="text-accent-2">&amp;</span> Build
             </h1>
-            <p className="text-lg md:text-xl text-contrast-midtone mb-14 opacity-0 animate-hero-fade-up [animation-delay:0.25s] ">
-              Signal &amp; Form is a Grapevine-based studio. We design brands, signage, and
-              physical products—and we build them for food trucks, local businesses, and makers in DFW.
+            <p className="text-lg md:text-xl text-contrast-midtone mb-6 opacity-0 animate-hero-fade-up [animation-delay:0.25s] [text-wrap:balance]">
+              Signal &amp; Form is a studio creating digital products and the brands around them.
+            </p>
+            <p className="text-base md:text-lg text-contrast-midtone/90 mb-14 opacity-0 animate-hero-fade-up [animation-delay:0.32s] [text-wrap:balance]">
+              We also design brand assets for food trucks and small businesses in DFW—and coordinate print, fulfillment, and installs through trusted partners.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-6 opacity-0 animate-hero-fade-up [animation-delay:0.4s] ">
               <Link
-                href="/solutions"
+                href="/products"
                 className="group px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-1/25"
               >
-                Design, Print &amp; Wrap
+                View products
               </Link>
               <Link
-                href="/products"
+                href="/work"
                 className="px-10 py-4 border border-contrast-midtone text-contrast rounded-full font-medium hover:bg-contrast hover:text-base transition-all duration-300"
               >
-                Products
+                See work
               </Link>
             </div>
           </div>

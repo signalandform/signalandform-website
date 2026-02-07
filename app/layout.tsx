@@ -3,6 +3,7 @@ import { Roboto_Flex, Playfair_Display, Syne } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackgroundTreatment from "@/components/BackgroundTreatment";
 
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
@@ -43,7 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoFlex.variable} ${playfair.variable} ${syne.variable} font-sans antialiased bg-base text-contrast`}>
+      <body
+        className={`${robotoFlex.variable} ${playfair.variable} ${syne.variable} font-sans antialiased bg-base text-contrast`}
+      >
+        <BackgroundTreatment />
         <Header />
         <main>{children}</main>
         <Footer />

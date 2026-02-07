@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
-import ParallaxBackground from "@/components/ParallaxBackground";
 
 export const metadata: Metadata = {
   title: "Contact | Signal & Form",
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <ParallaxBackground />
       <div className="relative z-10 min-h-screen">
         {/* Hero */}
         <section className="relative py-28 px-4 bg-base overflow-hidden">
