@@ -34,6 +34,10 @@ export default function Footer() {
               <a href="mailto:info@hilltoptruckpark.com" className="text-htp-red hover:underline">
                 info@hilltoptruckpark.com
               </a>
+              <br />
+              <a href="mailto:jack@signalandformllc.com" className="text-htp-red hover:underline">
+                jack@signalandformllc.com
+              </a>
             </p>
           </div>
           <nav className="flex flex-col gap-2" aria-label="Footer navigation">
