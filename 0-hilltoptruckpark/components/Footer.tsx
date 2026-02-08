@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-3">
               <Image
-                src="/images/hilltop-logo.jpg"
+                src="/images/IMG_0935.png"
                 alt="Hilltop Truck Park"
                 width={168}
                 height={48}

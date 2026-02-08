@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description:
     "Hilltop Truck Park is a food truck court in Northlake, TX. Enjoy great food, events, and community at 8150 Thompson Rd.",
   metadataBase: new URL("https://hilltoptruckpark.signalandform.net"),
+  icons: {
+    icon: "/images/IMG_0935.png",
+  },
   openGraph: {
     title: "Hilltop Truck Park | Food Truck Court | Northlake, TX",
     description:

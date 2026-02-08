@@ -27,7 +27,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/hilltop-logo.jpg"
+              src="/images/IMG_0935.png"
               alt="Hilltop Truck Park"
               width={200}
               height={56}

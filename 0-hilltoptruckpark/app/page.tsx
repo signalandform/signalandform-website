@@ -24,7 +24,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 flex justify-center">
             <Image
-              src="/images/hilltop-logo.jpg"
+              src="/images/IMG_0935.png"
               alt="Hilltop Truck Park"
               width={200}
               height={80}
