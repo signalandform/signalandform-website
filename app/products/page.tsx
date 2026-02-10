@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Products | Signal & Form",
   description:
-    "TypeStrip and CountrTop — product brands from Signal & Form. Privacy-first text capture and a restaurant operations platform.",
+    "TypeStrip, CountrTop, and Citestack — product brands from Signal & Form. Privacy-first text capture, restaurant operations, and citation-first research library.",
 };
 
 export default function ProductsPage() {
@@ -58,6 +58,28 @@ export default function ProductsPage() {
                 className="inline-flex items-center gap-2 text-accent-2 font-medium hover:text-accent-1 transition-colors"
               >
                 Visit CountrTop
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Citestack - intro card */}
+            <div className="group rounded-xl border border-base-midtone bg-base-midtone/30 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent-3/50 hover:shadow-xl hover:shadow-accent-3/10 scroll-reveal">
+              <h2 className="font-display font-semibold text-2xl text-contrast mb-4">
+                Citestack
+              </h2>
+              <p className="text-contrast-midtone leading-relaxed mb-6">
+                Citestack helps you build a clean, searchable source library—without the chaos of
+                scattered bookmarks, downloads, and half-remembered PDFs.
+              </p>
+              <a
+                href="https://citestack.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent-2 font-medium hover:text-accent-1 transition-colors"
+              >
+                Visit Citestack
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
@@ -248,6 +270,73 @@ export default function ProductsPage() {
               className="inline-flex items-center gap-2 px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300"
             >
               Visit CountrTop
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Citestack - full section */}
+          <div className="mt-24 scroll-reveal">
+            <h2 className="font-display font-semibold text-display-md text-contrast mb-6">
+              Citestack
+            </h2>
+            <p className="text-xl text-accent-2 font-medium mb-6">
+              Your citation-first research library.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-6 max-w-3xl">
+              Citestack helps you build a clean, searchable source library—without the chaos of
+              scattered bookmarks, downloads, and half-remembered PDFs. Save a URL, paste text, or
+              upload a file, and Citestack extracts and organizes the content so you can find it
+              later and cite it with confidence.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-6 max-w-3xl">
+              Unlike generic note apps or &quot;read later&quot; tools, Citestack is designed around a simple
+              idea: research is only useful when you can trace it back to the source. Citestack keeps
+              sources first-class—so papers, articles, excerpts, and notes stay connected to where
+              they came from, and your library stays usable as it grows.
+            </p>
+            <p className="text-contrast-midtone leading-relaxed mb-8 max-w-3xl">
+              The experience is intentionally straightforward: fast capture, structured records, and a
+              library you can actually search when you&apos;re under deadline—whether you&apos;re writing,
+              studying, or building a knowledge base for work.
+            </p>
+            <h3 className="font-display font-semibold text-xl text-contrast mb-4">
+              Core principles
+            </h3>
+            <ul className="space-y-2 text-contrast-midtone mb-8 max-w-3xl">
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Source-first organization (citations aren&apos;t an afterthought)
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Capture anything: URL, pasted text, or uploaded files
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Automatic extraction + enrichment to keep records consistent
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Searchable library built for real research workflows
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-2">•</span>
+                Built to scale from a few references to thousands
+              </li>
+            </ul>
+            <p className="text-contrast-midtone leading-relaxed max-w-3xl mb-12 italic">
+              Citestack is about reducing &quot;research drag&quot;—less time hunting, more time thinking and
+              writing.
+            </p>
+            <a
+              href="https://citestack.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-accent-1 text-base font-medium rounded-full hover:bg-accent-2 transition-all duration-300"
+            >
+              Visit Citestack
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
