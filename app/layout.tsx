@@ -25,6 +25,9 @@ const syne = Syne({
 
 export const metadata: Metadata = {
   title: "Signal & Form | A Creative Studio for Custom Print and Design",
+  icons: {
+    icon: "/brand/logos/IMG_0285.PNG",
+  },
   description:
     "Signal & Form is a creative studio in Grapevine, TX, focused on custom signage and branding, the ideal creative studio for custom print and design.",
   metadataBase: new URL("https://signalandform.net"),
