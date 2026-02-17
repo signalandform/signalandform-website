@@ -6,6 +6,7 @@ Monorepo with two Next.js sites:
 |------|----------------|--------|
 | **Signal & Form LLC** | `.` (root) | signalandform.net |
 | **Hilltop Truck Park** | `0-hilltoptruckpark/` | hilltoptruckpark.signalandform.net |
+| **Budgetless** | `0-budgetless/` | budgetless.signalandform.net |
 
 ---
 
@@ -71,3 +72,14 @@ npm run dev
 4. Configure DNS (CNAME) as instructed by Vercel
 
 See `0-hilltoptruckpark/README.md` for more details.
+
+## Budgetless
+
+Subscription tracking app. Hosted at `budgetless.signalandform.net`.
+
+1. Create a **third** Vercel project from the same repo
+2. Set **Root Directory** to `0-budgetless`
+3. Add custom domain `budgetless.signalandform.net`
+4. Configure DNS (CNAME) as instructed by Vercel
+
+See `0-budgetless/README.md` for more details.
